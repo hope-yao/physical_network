@@ -71,3 +71,7 @@ plt.show()
 #     test_pred += [sess.run(y_pred_testing, {y_true: y_test[15*i:15*(i+1)]})]
 # np.save('./temp/k4_test_dist_y2.npy',np.reshape(np.asarray(test_pred)[:,:,-1,1],60*15))
 # np.save('./temp/k4_test_dist_y3.npy',np.reshape(np.asarray(test_pred)[:,:,-1,2],60*15))
+
+# saver = tf.train.Saver()
+# snapshot_name = "%s_%s" % ('experiment', str(count))
+# saver.save(sess, "%s/%s.ckpt" % (modeldir, snapshot_name))
