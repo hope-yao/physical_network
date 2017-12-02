@@ -9,18 +9,14 @@ time_start = 0
 time_end = 10
 num_time_steps = int((time_end-time_start)/delta_t) + 1
 num_y = 3
-num_layers = 2
+num_layers = 4
 gamma = 0.1
 zeta = 0.9
 eps = 1e-8
 lr = 0.2 # looks good for DR_RNN_4, which is not specified in the paper
-# lr = 1. # looks good for DR_RNN_1, which is not specified in the paper
-num_epochs = 150
+# lr = 1. # looks good for DR_RNN_1,DR_RNN_2, which is not specified in the paper
+num_epochs = 15
 batch_size = 15
-
-def weight_variable(shape):
-  initial = tf.truncated_normal(shape, stddev=0.1)
-  return tf.Variable(initial)
 
 def get_residual(y_tp1, y_t, delta_t):
     er1 = y_tp1[:,0] - y_t[:,0] - delta_t * y_tp1[:,0] * y_tp1[:,2]
@@ -30,42 +26,59 @@ def get_residual(y_tp1, y_t, delta_t):
 
 def load_data(data_fn):
     y = sio.loadmat(data_fn)['y']
-    idx = np.random.choice(len(y), len(y), replace=False)
-    return y[idx[:500]], y[idx[500:]]
-    # y = np.load(data_fn)
-    # return y['y_train'], y['y_test']
+    # idx = np.random.choice(len(y), len(y), replace=False)
+    # return y[idx[:500]], y[idx[500:]]
+    return y[:500], y[500:]
 
 def main(cfg):
 
-    weight_w = tf.Variable(tf.truncated_normal([3,], stddev=0.1),'name=weight_w')
+    weight_w = tf.Variable(tf.truncated_normal([3,], stddev=0.1),name='weight_w')
     weight_u = tf.constant(1.,name='weight_u')#tf.truncated_normal([1,], stddev=0.1)
     eta = tf.Variable(tf.random_uniform([num_layers-1,]),name='eta')
     y_true = tf.placeholder(tf.float32,shape=(batch_size,num_time_steps,num_y))
+
     y_pred = y_true[:,0:1,:]# initial predictions
+    with tf.variable_scope("DR_RNN_testing", reuse=True) as training:
+        ## Training
+        for t in range(num_time_steps-1):
+            y_t = y_pred[:, -1, :]
+            y_tp1 = y_t #initial guess for the value in next time step
+            r_tp1 = get_residual(y_tp1, y_true[:,t,:], delta_t)
+            # first layer
+            y_tp1 = y_tp1 - weight_w * tf.nn.tanh(weight_u * r_tp1)
+            # following layers
+            G =  tf.norm(r_tp1,axis=1)  #which is not specified in the paper
+            for k in range(num_layers-1):
+                r_tp1 = get_residual(y_tp1, y_true[:,t,:], delta_t)
+                G = gamma * tf.norm(r_tp1,axis=1) + zeta * G
+                y_tp1 = y_tp1 - tf.expand_dims(eta[k]/tf.sqrt(G+eps),1) * r_tp1
+            y_pred = tf.concat([y_pred,tf.expand_dims(y_tp1,1)],1)
 
-    # DO_SHARE=None # workaround for variable_scope(reuse=True)
-    # with tf.variable_scope("DR_RNN", reuse=DO_SHARE) as :
+    y_pred_testing = y_true[:,0:1,:]# initial predictions
+    with tf.variable_scope("DR_RNN_testing", reuse=True) as testing:
+        ## Testing
+        for t in range(num_time_steps-1):
+            y_t_testing = y_pred_testing[:, -1, :]
+            y_tp1_testing = y_t_testing  # initial guess for the value in next time step
+            r_tp1_testing = get_residual(y_tp1_testing, y_t_testing, delta_t)
+            # first layer
+            y_tp1_testing = y_tp1_testing - weight_w * tf.nn.tanh(weight_u * r_tp1_testing)
+            # following layers
+            G_testing =  tf.norm(r_tp1_testing,axis=1)  #which is not specified in the paper
+            for k in range(num_layers-1):
+                r_tp1_testing = get_residual(y_tp1_testing, y_t_testing, delta_t)
+                G_testing = gamma * tf.norm(r_tp1,axis=1) + zeta * G_testing
+                y_tp1_testing = y_tp1_testing - tf.expand_dims(eta[k]/tf.sqrt(G_testing+eps),1) * r_tp1_testing
+            y_pred_testing = tf.concat([y_pred_testing,tf.expand_dims(y_tp1_testing,1)],1)
 
-    for t in range(num_time_steps-1):
-        y_t = y_pred[:, -1, :]
-        y_tp1 = y_t #initial guess for the value in next time step
 
-        r_tp1 = get_residual(y_true[:,t+1,:], y_t, delta_t)
-        # first layer
-        y_tp1 = y_tp1 - weight_w * tf.nn.tanh(weight_u * r_tp1)
-        # following layers
-        G = tf.norm(r_tp1,axis=1)  #which is not specified in the paper
-        for k in range(num_layers-1):
-            G = gamma * tf.norm(r_tp1,axis=1) + zeta * G
-            y_tp1 = y_tp1 - tf.expand_dims(eta[k]/tf.sqrt(G+eps),1) * r_tp1
-
-        y_pred = tf.concat([y_pred,tf.expand_dims(y_tp1,1)],1)
     loss = tf.reduce_mean(tf.square(y_true - y_pred))
+    loss_testing = tf.reduce_mean(tf.square(y_true - y_pred_testing))
 
     ## OPTIMIZER ## note: both optimizer and learning rate is not found in the paper
     learning_rate = tf.Variable(lr) # learning rate for optimizer
     optimizer=tf.train.AdamOptimizer(learning_rate, beta1=0.5)
-    grads=optimizer.compute_gradients(loss)
+    grads=optimizer.compute_gradients(loss,[weight_w,eta])
     # for i,(g,v) in enumerate(grads):
     #     if g is not None:
     #         grads[i]=(tf.clip_by_norm(g,5),v) # clip gradients
@@ -105,7 +118,7 @@ def main(cfg):
             if count%10==0:
                 train_result = sess.run(loss, {y_true:y_input})
                 rand_idx = np.random.random_integers(0,len(y_test)-1,size=batch_size)
-                test_result = sess.run(loss, {y_true: y_test[rand_idx]})
+                test_result = sess.run(loss_testing, {y_true: y_test[rand_idx]})
                 print("iter:{}  train_cost: {}  test_cost: {} ".format(count, train_result, test_result))
                 summary = sess.run(summary_op, {y_true:y_test[rand_idx]})
                 summary_writer.add_summary(summary, count)
