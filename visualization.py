@@ -72,6 +72,23 @@ plt.show()
 # np.save('./temp/k4_test_dist_y2.npy',np.reshape(np.asarray(test_pred)[:,:,-1,1],60*15))
 # np.save('./temp/k4_test_dist_y3.npy',np.reshape(np.asarray(test_pred)[:,:,-1,2],60*15))
 
-# saver = tf.train.Saver()
-# snapshot_name = "%s_%s" % ('experiment', str(count))
-# saver.save(sess, "%s/%s.ckpt" % (modeldir, snapshot_name))
+
+# #saver.restore(sess, "*.ckpt")
+# summary_writer = tf.summary.FileWriter(logdir)
+# grad1 = tf.reduce_mean(tf.abs(tf.gradients(cost, tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="Variable:0")[0])[0]))
+# grad2 = tf.reduce_mean(tf.abs(tf.gradients(cost, tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="Variable_2:0")[0])[0]))
+# grad3 = tf.reduce_mean(tf.abs(tf.gradients(cost, tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="VoxNet/fc3/weights:0")[0])[0]))
+# grad4 = tf.reduce_mean(tf.abs(tf.gradients(cost, tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="VoxNet/fc4/weights:0")[0])[0]))
+# grad5 = tf.reduce_mean(tf.abs(tf.gradients(cost, tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="reader/fc1/weights:0")[0])[0]))
+# grad6 = tf.reduce_mean(tf.abs(tf.gradients(cost, tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="reader/fc2/weights:0")[0])[0]))
+# summary_op = tf.summary.merge([
+#     tf.summary.scalar("loss/loss", cost),
+#     tf.summary.scalar("err/err_last", err[-1]),
+#     tf.summary.scalar("lr/lr", learning_rate),
+#     tf.summary.scalar("grad/grad1", grad1),
+#     tf.summary.scalar("grad/grad2", grad2),
+#     tf.summary.scalar("grad/grad3", grad3),
+#     tf.summary.scalar("grad/grad4", grad4),
+#     tf.summary.scalar("grad/grad5", grad5),
+#     tf.summary.scalar("grad/grad6", grad6),
+# ])
