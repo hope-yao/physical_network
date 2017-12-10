@@ -8,12 +8,15 @@ Reproduced result of Fig.2 from [the paper](https://arxiv.org/abs/1709.00939)
 
 ![dist3](./assets/problem1_dist3.png)
 
+Results for increasing time steps in DR-RNN
+![dist3](./assets/increase_time_steps.png)
+
 # Todo
-- extrapolation in time
-- larger time step
-- scalability with y
-- include mapping from x to y
-- compute sensitivity w.r.t x for control purpose
-- adding external loading and see if it is predictable given observation in y
-- partial observed
-- Direct Acyclic Graph and Bayesian
+- [] extrapolation in time
+- [x] larger time step
+- [] scalability with y
+- [] include mapping from x to y
+- [] compute sensitivity w.r.t x for control purpose
+- [] adding external loading and see if it is predictable given observation in y
+- [] partial observed
+- [] Direct Acyclic Graph and Bayesian

@@ -92,3 +92,6 @@ plt.show()
 #     tf.summary.scalar("grad/grad5", grad5),
 #     tf.summary.scalar("grad/grad6", grad6),
 # ])
+
+
+# drrnn.saver.restore(drrnn.sess,'/home/hope-yao/Documents/physical_network/saved_models/DR-RNN_K1/DR-RNN_K1_2017_12_07_11_09_34/experiment_1.ckpt')
