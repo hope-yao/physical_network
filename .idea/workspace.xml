@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f95bfc-d4b9-4db0-93c9-bb74f4d5cbff" name="Default" comment="add basic readme">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/increase_time_steps.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/extrapolation_in_time.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/data/Y_dot_10_12112017.mat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/data/Y_dot_25_12112017.mat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/data/problem1_1211.mat" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/DR_RNN.py" afterPath="$PROJECT_DIR$/DR_RNN.py" />
-      <change beforePath="$PROJECT_DIR$/assets/probem1_dist2.png" afterPath="$PROJECT_DIR$/assets/problem1_dist2.png" />
       <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K1/DR-RNN_K1_2017_12_01_17_38_20/checkpoint" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K1/DR-RNN_K1_2017_12_01_17_38_20/experiment_495.ckpt.data-00000-of-00001" afterPath="" />
@@ -19,7 +21,6 @@
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.data-00000-of-00001" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.index" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/visualization.py" afterPath="$PROJECT_DIR$/visualization.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +31,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/physical_network$session.coverage" NAME="session Coverage Results" MODIFIED="1512081870367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client" />
-    <SUITE FILE_PATH="coverage/physical_network$DR_RNN.coverage" NAME="DR_RNN Coverage Results" MODIFIED="1512930670829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/physical_network$DR_RNN.coverage" NAME="DR_RNN Coverage Results" MODIFIED="1513033206388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -46,41 +47,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DR_RNN.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DR_RNN.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DR_RNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2664">
-              <caret line="155" column="17" lean-forward="false" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
+            <state relative-caret-position="320">
+              <caret line="141" column="65" lean-forward="false" selection-start-line="141" selection-start-column="65" selection-end-line="141" selection-end-column="65" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
                 <element signature="e#926#981#0" expanded="false" />
-                <element signature="e#4825#4859#0" expanded="false" />
+                <element signature="e#4874#4908#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/axes/_base.py">
+      <file leaf-file-name="backend_interagg.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm_matplotlib_backend/backend_interagg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3366">
-              <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+            <state relative-caret-position="203">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tensor_util.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/tensor_util.py">
+      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5238">
-              <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+            <state relative-caret-position="177">
+              <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
@@ -94,25 +95,13 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="270">
-                <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <first_editor relative-caret-position="342">
+                <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
                 <folding />
               </first_editor>
               <second_editor>
                 <js_state />
               </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="visualization.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1692">
-              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,6 +133,8 @@
       <find>delta_t</find>
       <find>delta_t_testing</find>
       <find>test</find>
+      <find>y_train</find>
+      <find>y_test</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/temp</dir>
@@ -159,8 +150,8 @@
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/visualization.py" />
-        <option value="$PROJECT_DIR$/DR_RNN.py" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/DR_RNN.py" />
       </list>
     </option>
   </component>
@@ -171,8 +162,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="196" />
-    <option name="y" value="24" />
+    <option name="x" value="-84" />
+    <option name="y" value="306" />
     <option name="width" value="1855" />
     <option name="height" value="1049" />
   </component>
@@ -203,7 +194,7 @@
             <path>
               <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
               <item name="physical_network" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
@@ -214,14 +205,7 @@
               <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
               <item name="physical_network" type="462c0819:PsiDirectoryNode" />
               <item name="saved_logs" type="462c0819:PsiDirectoryNode" />
-              <item name="DR-RNN_K4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="physical_network" type="462c0819:PsiDirectoryNode" />
-              <item name="saved_logs" type="462c0819:PsiDirectoryNode" />
-              <item name="DR-RNN_K4" type="462c0819:PsiDirectoryNode" />
-              <item name="DR-RNN_K4_2017_12_10_11_31_16" type="462c0819:PsiDirectoryNode" />
+              <item name="DR-RNN_K2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,12 +220,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/saved_logs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512422856157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="tested increasing time steps for DR-RNN">
+      <created>1512947459235</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1512947459235</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -356,25 +348,25 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40822786" sideWeight="0.1529086" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16509695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="414" height="885" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3206751" sideWeight="0.2825485" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16509695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="414" height="885" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2900844" sideWeight="0.6437673" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40822786" sideWeight="0.84709144" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30379745" sideWeight="0.833795" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33122364" sideWeight="0.49584487" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15457064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05096953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15529673" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49806094" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20221607" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35443038" sideWeight="0.734072" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3206751" sideWeight="0.7174515" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49806094" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -414,121 +406,135 @@
     <MESSAGE value="DR_RNN1 reached 6e-4 training error" />
     <MESSAGE value="seems working now" />
     <MESSAGE value="add basic readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic readme" />
+    <MESSAGE value="tested increasing time steps for DR-RNN" />
+    <option name="LAST_COMMIT_MESSAGE" value="tested increasing time steps for DR-RNN" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DR_RNN.py</url>
-          <line>222</line>
+          <line>245</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DR_RNN.py</url>
+          <line>153</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="55" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
-        <expression-string>self.save_data(self.delta_t*16)
-self.visualization(logdir, cfg['num_layers'], self.delta_t, self.delta_t*16)
-print('done')</expression-string>
+        <expression-string>self.testing_loss_value = self.sess.run(self.testing_loss,
+                                        {self.y_true: y_test[rand_idx], self.delta_t_testing: self.delta_t})
+print(&quot;iter:{}  train_cost: {}  test_cost: {} &quot;.format(count, self.training_loss_value, self.testing_loss_value))
+training_summary, testing_summary = self.sess.run([self.summary_op_training, self.summary_op_testing],
+                                                  {self.y_true: y_test[rand_idx], self.delta_t_testing: self.delta_t})</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.save_data(self.delta_t*8)
-self.visualization(logdir, cfg['num_layers'], self.delta_t, self.delta_t*8)
-print('done')</expression-string>
+        <expression-string>self.extrapolation_in_time(y_test)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.save_data(self.delta_t*4)
-self.visualization(logdir, cfg['num_layers'], self.delta_t, self.delta_t*4)
-print('done')</expression-string>
+        <expression-string>def extrapolation_in_time(self,y_test):
+    y_test_new = self.sess.run(self.y_pred_testing,
+                               {self.y_true: y_test[:self.batch_size], self.delta_t_testing: self.delta_t})
+    y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size, ::-1, :],
+                                                         self.delta_t_testing: self.delta_t})
+    tt_y = np.concatenate([y_test_new, y_test_new_new], 1)
+    idx = 1
+    plt.plot(np.arange(0, (tt_y.shape[1] - 0.5) * self.delta_t, self.delta_t), tt_y[0, :, idx], 'r',
+             label='k{}_test_drrnn'.format(self.num_layers))
+    plt.plot(np.arange(0, (tt_y.shape[1] - 0.5) * self.delta_t, self.delta_t), self.y_test_all[0, :tt_y.shape[1], idx],
+             'b', label='ODE45')
+    plt.legend()
+    plt.show()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.save_data(self.delta_t*2)
-self.visualization(logdir, cfg['num_layers'], self.delta_t, self.delta_t*2)
-print('done')</expression-string>
+        <expression-string>y_test_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:self.delta_t})
+y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size,::-1,:],self.delta_t_testing:self.delta_t})
+tt_y = np.concatenate([y_test_new,y_test_new_new],1)
+
+idx = 1
+k = 2
+plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), tt_y[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
+plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), y_test_all[0,:tt_y.shape[1],idx], 'b', label='ODE45')
+plt.legend()
+plt.show()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.save_data(self.delta_t*1)
-self.visualization(logdir, cfg['num_layers'], self.delta_t, self.delta_t*1)
-print('done')</expression-string>
+        <expression-string>y_test_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:self.delta_t})
+y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size,::-1,:],self.delta_t_testing:self.delta_t})
+tt_y = np.concatenate([y_test_new,y_test_new_new],1)
+
+idx = 1
+k = 2
+plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), tt_y[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
+plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), y_test_all[i * self.batch_size,:tt_y.shape[1],idx], 'b', label='ODE45')
+plt.legend()
+plt.show()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.arange(0,100.5*delta_t_testing,delta_t_testing)</expression-string>
+        <expression-string>y_test_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:self.delta_t})
+y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size,::-1,:],self.delta_t_testing:self.delta_t})
+tt_y = np.concatenate([y_test_new,y_test_new_new],1)
+
+idx = 1
+k = 2
+plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), tt_y[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
+plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), y_test
+_all[i * self.batch_size,:tt_y.shape[1],idx], 'b', label='ODE45')
+plt.legend()
+plt.show()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.arange(0,101*delta_t_testing,delta_t_testing)</expression-string>
+        <expression-string>y_test_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:self.delta_t})
+y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size,::-1,:],self.delta_t_testing:self.delta_t})
+tt_y = np.concatenate([y_test_new,y_test_new_new],1)
+
+idx = 1
+k = 2
+plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), tt_y[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
+plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), y_train_all[i * self.batch_size,:tt_y.shape[1],idx], 'b', label='ODE45')
+plt.legend()
+plt.show()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.arange(0,100*delta_t_testing,delta_t_testing)</expression-string>
+        <expression-string>y_train</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.arange(0,10*delta_t_testing,delta_t_testing)</expression-string>
+        <expression-string>y_train_all</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.load_data()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DR_RNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4825#4859#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/numpy/lib/npyio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6246">
-          <caret line="369" column="0" lean-forward="false" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -541,6 +547,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18054">
           <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -549,7 +556,7 @@ print('done')</expression-string>
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -568,7 +575,7 @@ print('done')</expression-string>
           <folding>
             <element signature="e#0#23#0" expanded="true" />
             <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4825#4859#0" expanded="false" />
+            <element signature="e#4874#4908#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -577,6 +584,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6246">
           <caret line="369" column="0" lean-forward="false" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -594,7 +602,7 @@ print('done')</expression-string>
         <state relative-caret-position="720">
           <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -606,7 +614,7 @@ print('done')</expression-string>
           <folding>
             <element signature="e#0#23#0" expanded="true" />
             <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4825#4859#0" expanded="false" />
+            <element signature="e#4874#4908#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -615,6 +623,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30276">
           <caret line="1682" column="0" lean-forward="false" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -622,6 +631,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7686">
           <caret line="443" column="0" lean-forward="false" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -630,6 +640,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
           <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +657,7 @@ print('done')</expression-string>
         <state relative-caret-position="1314">
           <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -662,6 +673,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18054">
           <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -679,7 +691,7 @@ print('done')</expression-string>
           <folding>
             <element signature="e#0#23#0" expanded="true" />
             <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4825#4859#0" expanded="false" />
+            <element signature="e#4874#4908#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,6 +700,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30276">
           <caret line="1682" column="0" lean-forward="false" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -695,6 +708,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7686">
           <caret line="443" column="0" lean-forward="false" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -703,6 +717,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
           <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -719,7 +734,7 @@ print('done')</expression-string>
         <state relative-caret-position="1368">
           <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -735,6 +750,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18054">
           <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -756,6 +772,9 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -763,6 +782,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -770,13 +790,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
           <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30276">
-          <caret line="1682" column="0" lean-forward="false" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -784,6 +798,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="443" column="0" lean-forward="false" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -792,6 +807,7 @@ print('done')</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6246">
           <caret line="369" column="0" lean-forward="false" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -821,54 +837,8 @@ print('done')</expression-string>
         <state relative-caret-position="1692">
           <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/axes/_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3366">
-          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DR_RNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2664">
-          <caret line="155" column="17" lean-forward="false" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4825#4859#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -885,6 +855,84 @@ print('done')</expression-string>
         <state relative-caret-position="36">
           <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/axes/_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="1682" column="0" lean-forward="false" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_11_15_50_04/iter31.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_11_15_50_04/iter62.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_11_15_50_04/iter93.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm_matplotlib_backend/backend_interagg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="342">
+            <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DR_RNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="141" column="65" lean-forward="false" selection-start-line="141" selection-start-column="65" selection-end-line="141" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#926#981#0" expanded="false" />
+            <element signature="e#4874#4908#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

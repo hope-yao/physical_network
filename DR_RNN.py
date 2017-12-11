@@ -83,6 +83,7 @@ class DR_RNN:
             self.testing_loss = tf.reduce_mean(tf.square(self.y_true - self.y_pred_testing))
 
     def training_init(self):
+        '''initial training graph and monitor'''
 
         ## OPTIMIZER ## note: both optimizer and learning rate is not found in the paper
         self.learning_rate = tf.Variable(self.lr)  # learning rate for optimizer
@@ -117,9 +118,12 @@ class DR_RNN:
         self.saver = tf.train.Saver()
 
     def train_model(self):
+        '''training starts '''
 
-        ## training starts ###
-        y_train, y_test = self.load_data()
+        self.y_train_all, self.y_test_all = self.load_data()
+        y_train = self.y_train_all[:, :101, :]
+        y_test = self.y_test_all[:, :101, :]
+
         count = 0
         for epoch in tqdm(range(self.num_epochs)):
             it_per_ep = len(y_train) / self.batch_size
@@ -144,14 +148,28 @@ class DR_RNN:
                     snapshot_name = "%s_%s" % ('experiment', str(count))
                     self.saver.save(self.sess, "%s/%s.ckpt" % (modeldir, snapshot_name))
                 count += 1
-            self.save_data(self.delta_t)
-            self.visualization(logdir, cfg['num_layers'], self.delta_t, self.delta_t)
+            self.visualization(cfg['num_layers'], y_test, self.delta_t, self.delta_t, count, dist_viz=0)
+            # self.extrapolation_in_time(y_test)
+            # self.save_data(y_train, y_test, self.delta_t)
             print('done')
 
-    def save_data(self,delta_t_testing,dist_viz=0):
+    def extrapolation_in_time(self,y_test):
+        y_test_new = self.sess.run(self.y_pred_testing,
+                                   {self.y_true: y_test[:self.batch_size], self.delta_t_testing: self.delta_t})
+        y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size, ::-1, :],
+                                                             self.delta_t_testing: self.delta_t})
+        tt_y = np.concatenate([y_test_new, y_test_new_new], 1)
+        idx = 1
+        plt.plot(np.arange(0, (tt_y.shape[1] - 0.5) * self.delta_t, self.delta_t), tt_y[0, :, idx], 'r',
+                 label='k{}_test_drrnn'.format(self.num_layers))
+        plt.plot(np.arange(0, (tt_y.shape[1] - 0.5) * self.delta_t, self.delta_t), self.y_test_all[0, :tt_y.shape[1], idx],
+                 'b', label='ODE45')
+        plt.legend()
+        plt.show()
+
+    def save_data(self,y_train, y_test, delta_t_testing,dist_viz=0):
 
         k = self.num_layers
-        y_train, y_test = drrnn.load_data()
         np.save(self.logdir + '/k{}_train_drrnn.npy'.format(k),
                 self.sess.run(self.y_pred, {self.y_true: y_test[:self.batch_size]}))
         np.save(self.logdir + '/k{}_test_drrnn.npy'.format(k),
@@ -166,12 +184,15 @@ class DR_RNN:
                 np.save(self.logdir + '/k{}_test_dist_y{}.npy'.format(k, i),
                         np.reshape(np.asarray(test_pred)[:, :, -1, i], 60 * 15))
 
-    def visualization(self,logdir, k, delta_t_training, delta_t_testing, dist_viz=0):
-        plt.figure()
-        aa = np.load(logdir + '/k{}_numerical.npy'.format(k))
-        bb = np.load(logdir + '/k{}_train_drrnn.npy'.format(k))
-        cc = np.load(logdir + '/k{}_test_drrnn.npy'.format(k))
+    def visualization(self, k, y_test, delta_t_training, delta_t_testing, count, dist_viz=0):
+        # aa = np.load(logdir + '/k{}_numerical.npy'.format(k))
+        # bb = np.load(logdir + '/k{}_train_drrnn.npy'.format(k))
+        # cc = np.load(logdir + '/k{}_test_drrnn.npy'.format(k))
+        aa = y_test[:self.batch_size]
+        bb = self.sess.run(self.y_pred, {self.y_true: y_test[:self.batch_size]})
+        cc = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:delta_t_testing})
         idx = 1
+        fig  = plt.figure()
         plt.plot(np.arange(0,10+delta_t_training,delta_t_training), aa[0, :, idx], 'k', label='k{}_numerical'.format(k))
         plt.plot(np.arange(0,10+delta_t_training,delta_t_training), bb[0, :, idx], 'b', label='k{}_train_drrnn'.format(k))
         plt.plot(np.arange(0,100.5*delta_t_testing,delta_t_testing), cc[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
@@ -179,7 +200,9 @@ class DR_RNN:
         plt.xlabel('physical time')
         plt.ylabel('y{}'.format(idx))
         plt.title('train_err:{}  test_err:{}'.format(self.training_loss_value,self.testing_loss_value))
+        plt.axis([0,10,0,1.2])
         plt.show()
+        fig.savefig(self.logdir+'/iter{}.png'.format(count))
 
         if dist_viz:
             plt.figure()
@@ -197,14 +220,14 @@ if __name__ == "__main__":
            'time_start': 0,
            'time_end': 10,
            'num_y': 3,
-           'num_layers': 4,
+           'num_layers': 2,
            'gamma': 0.1,
            'zeta': 0.9,
            'eps': 1e-8,
            'lr': 0.1,  # 0.2 for DR_RNN_4, 1.0 for DR_RNN_1,2
            'num_epochs': 15*4,
            'batch_size': 16,
-           'data_fn': './data/problem1_1129.mat',  # './data/problem1.npz'
+           'data_fn': './data/problem1_1211.mat',  # './data/problem1.npz'
            }
     logdir, modeldir = creat_dir("DR-RNN_K{}".format(cfg['num_layers']))
     copyfile('DR_RNN.py', modeldir + '/' + 'DR_RNN.py')
