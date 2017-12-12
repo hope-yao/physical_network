@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88f95bfc-d4b9-4db0-93c9-bb74f4d5cbff" name="Default" comment="add basic readme">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/extrapolation_in_time.png" />
+    <list default="true" id="88f95bfc-d4b9-4db0-93c9-bb74f4d5cbff" name="Default" comment="finished">
       <change beforePath="" afterPath="$PROJECT_DIR$/data/Y_dot_10_12112017.mat" />
       <change beforePath="" afterPath="$PROJECT_DIR$/data/Y_dot_25_12112017.mat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/problem1_1211.mat" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/DR_RNN.py" afterPath="$PROJECT_DIR$/DR_RNN.py" />
       <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
@@ -21,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.data-00000-of-00001" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.index" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +30,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/physical_network$session.coverage" NAME="session Coverage Results" MODIFIED="1512081870367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client" />
-    <SUITE FILE_PATH="coverage/physical_network$DR_RNN.coverage" NAME="DR_RNN Coverage Results" MODIFIED="1513033206388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/physical_network$DR_RNN.coverage" NAME="DR_RNN Coverage Results" MODIFIED="1513101715794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -50,34 +49,39 @@
       <file leaf-file-name="DR_RNN.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DR_RNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="141" column="65" lean-forward="false" selection-start-line="141" selection-start-column="65" selection-end-line="141" selection-end-column="65" />
+            <state relative-caret-position="249">
+              <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-                <element signature="e#926#981#0" expanded="false" />
-                <element signature="e#4874#4908#0" expanded="false" />
+                <element signature="e#1095#1150#0" expanded="false" />
+                <element signature="e#5072#5106#0" expanded="false" />
+                <element signature="e#9311#10141#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backend_interagg.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm_matplotlib_backend/backend_interagg.py">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="370">
+              <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="sensitivity_y2.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sensitivity_y2.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sensitivity_y3.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sensitivity_y3.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -95,13 +99,23 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="342">
-                <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <first_editor relative-caret-position="52">
+                <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
                 <folding />
               </first_editor>
               <second_editor>
                 <js_state />
               </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualization.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/visualization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,8 +147,9 @@
       <find>delta_t</find>
       <find>delta_t_testing</find>
       <find>test</find>
-      <find>y_train</find>
       <find>y_test</find>
+      <find>101</find>
+      <find>y_train</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/temp</dir>
@@ -147,9 +162,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/visualization.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/DR_RNN.py" />
       </list>
@@ -194,7 +209,7 @@
             <path>
               <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
               <item name="physical_network" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
@@ -340,28 +355,34 @@
       <option name="project" value="LOCAL" />
       <updated>1512947459235</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="tested extrapolation in time. Found that error goes up very fast.">
+      <created>1513035129936</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1513035129936</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3206751" sideWeight="0.2825485" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26054853" sideWeight="0.30249307" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16509695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="414" height="885" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2900844" sideWeight="0.6437673" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30379745" sideWeight="0.833795" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43987343" sideWeight="0.8105263" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33122364" sideWeight="0.49584487" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05096953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15235457" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49806094" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20221607" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29473683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3206751" sideWeight="0.7174515" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26054853" sideWeight="0.6975069" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -407,160 +428,84 @@
     <MESSAGE value="seems working now" />
     <MESSAGE value="add basic readme" />
     <MESSAGE value="tested increasing time steps for DR-RNN" />
-    <option name="LAST_COMMIT_MESSAGE" value="tested increasing time steps for DR-RNN" />
+    <MESSAGE value="tested extrapolation in time. Found that error goes up very fast." />
+    <option name="LAST_COMMIT_MESSAGE" value="tested extrapolation in time. Found that error goes up very fast." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DR_RNN.py</url>
-          <line>245</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DR_RNN.py</url>
-          <line>153</line>
-          <option name="timeStamp" value="60" />
+          <line>129</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="61" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="71" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
-        <expression-string>self.testing_loss_value = self.sess.run(self.testing_loss,
-                                        {self.y_true: y_test[rand_idx], self.delta_t_testing: self.delta_t})
-print(&quot;iter:{}  train_cost: {}  test_cost: {} &quot;.format(count, self.training_loss_value, self.testing_loss_value))
-training_summary, testing_summary = self.sess.run([self.summary_op_training, self.summary_op_testing],
-                                                  {self.y_true: y_test[rand_idx], self.delta_t_testing: self.delta_t})</expression-string>
+        <expression-string>'itr:{:d}  '.format(101)+'train_err:{0:.4e}  '.format(self.training_loss_value) + 'test_err:{0:4e}'.format(self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.extrapolation_in_time(y_test)</expression-string>
+        <expression-string>'itr:{:d}  '.format(101)+'train_err:{0:.14f}  test_err:{0:.14f}'.format(self.training_loss_value,1.0)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>def extrapolation_in_time(self,y_test):
-    y_test_new = self.sess.run(self.y_pred_testing,
-                               {self.y_true: y_test[:self.batch_size], self.delta_t_testing: self.delta_t})
-    y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size, ::-1, :],
-                                                         self.delta_t_testing: self.delta_t})
-    tt_y = np.concatenate([y_test_new, y_test_new_new], 1)
-    idx = 1
-    plt.plot(np.arange(0, (tt_y.shape[1] - 0.5) * self.delta_t, self.delta_t), tt_y[0, :, idx], 'r',
-             label='k{}_test_drrnn'.format(self.num_layers))
-    plt.plot(np.arange(0, (tt_y.shape[1] - 0.5) * self.delta_t, self.delta_t), self.y_test_all[0, :tt_y.shape[1], idx],
-             'b', label='ODE45')
-    plt.legend()
-    plt.show()</expression-string>
+        <expression-string>'itr:{:d}  '.format(101)+'train_err:{0:.14f}  test_err:{0:.14f}'.format(self.training_loss_value,self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>y_test_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:self.delta_t})
-y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size,::-1,:],self.delta_t_testing:self.delta_t})
-tt_y = np.concatenate([y_test_new,y_test_new_new],1)
-
-idx = 1
-k = 2
-plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), tt_y[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
-plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), y_test_all[0,:tt_y.shape[1],idx], 'b', label='ODE45')
-plt.legend()
-plt.show()</expression-string>
+        <expression-string>'train_err:{0:.14f}  test_err:{0:.14f}'.format(self.training_loss_value,self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>y_test_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:self.delta_t})
-y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size,::-1,:],self.delta_t_testing:self.delta_t})
-tt_y = np.concatenate([y_test_new,y_test_new_new],1)
-
-idx = 1
-k = 2
-plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), tt_y[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
-plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), y_test_all[i * self.batch_size,:tt_y.shape[1],idx], 'b', label='ODE45')
-plt.legend()
-plt.show()</expression-string>
+        <expression-string>'train_err:{0:.4e}  test_err:{0:.4e}'.format(self.training_loss_value,self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>y_test_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:self.delta_t})
-y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size,::-1,:],self.delta_t_testing:self.delta_t})
-tt_y = np.concatenate([y_test_new,y_test_new_new],1)
-
-idx = 1
-k = 2
-plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), tt_y[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
-plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), y_test
-_all[i * self.batch_size,:tt_y.shape[1],idx], 'b', label='ODE45')
-plt.legend()
-plt.show()</expression-string>
+        <expression-string>'train_err:{0:.4f}  test_err:{0:.4f}'.format(self.training_loss_value,self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>y_test_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test[:self.batch_size],self.delta_t_testing:self.delta_t})
-y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size,::-1,:],self.delta_t_testing:self.delta_t})
-tt_y = np.concatenate([y_test_new,y_test_new_new],1)
-
-idx = 1
-k = 2
-plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), tt_y[0, :, idx], 'r', label='k{}_test_drrnn'.format(k))
-plt.plot(np.arange(0,(tt_y.shape[1]-0.5)*self.delta_t,self.delta_t), y_train_all[i * self.batch_size,:tt_y.shape[1],idx], 'b', label='ODE45')
-plt.legend()
-plt.show()</expression-string>
+        <expression-string>'itr:{:d}  '.format(101)+'train_err:{0:.4f}  test_err:{0:.4f}'.format(self.training_loss_value,self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>y_train</expression-string>
+        <expression-string>'itr:{:d}  '..format(101)+'train_err:{0:.4f}  test_err:{0:.4f}'.format(self.training_loss_value,self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>y_train_all</expression-string>
+        <expression-string>'itr:{:d}  train_err:{0:.4f}  test_err:{0:.4f}'.format(101, self.training_loss_value,self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.load_data()</expression-string>
+        <expression-string>'itr:{d}  train_err:{0:.4f}  test_err:{0:.4f}'.format(101, self.training_loss_value,self.testing_loss_value)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18054">
-          <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Euler_backward.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -574,8 +519,9 @@ plt.show()</expression-string>
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4874#4908#0" expanded="false" />
+            <element signature="e#1095#1150#0" expanded="false" />
+            <element signature="e#5072#5106#0" expanded="false" />
+            <element signature="e#9311#10141#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -613,8 +559,9 @@ plt.show()</expression-string>
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4874#4908#0" expanded="false" />
+            <element signature="e#1095#1150#0" expanded="false" />
+            <element signature="e#5072#5106#0" expanded="false" />
+            <element signature="e#9311#10141#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -690,8 +637,9 @@ plt.show()</expression-string>
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4874#4908#0" expanded="false" />
+            <element signature="e#1095#1150#0" expanded="false" />
+            <element signature="e#5072#5106#0" expanded="false" />
+            <element signature="e#9311#10141#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -768,16 +716,6 @@ plt.show()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="74" column="45" lean-forward="false" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#37#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tqdm/_tqdm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -829,16 +767,7 @@ plt.show()</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38196">
           <caret line="2150" column="0" lean-forward="false" selection-start-line="2150" selection-start-column="0" selection-end-line="2150" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -850,26 +779,10 @@ plt.show()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/axes/_base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="1682" column="0" lean-forward="false" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -897,10 +810,41 @@ plt.show()</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="1086" column="0" lean-forward="false" selection-start-line="1086" selection-start-column="0" selection-end-line="1086" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -914,8 +858,8 @@ plt.show()</expression-string>
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="342">
-            <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <first_editor relative-caret-position="52">
+            <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
             <folding />
           </first_editor>
           <second_editor>
@@ -924,14 +868,31 @@ plt.show()</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DR_RNN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="141" column="65" lean-forward="false" selection-start-line="141" selection-start-column="65" selection-end-line="141" selection-end-column="65" />
+        <state relative-caret-position="249">
+          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#926#981#0" expanded="false" />
-            <element signature="e#4874#4908#0" expanded="false" />
+            <element signature="e#1095#1150#0" expanded="false" />
+            <element signature="e#5072#5106#0" expanded="false" />
+            <element signature="e#9311#10141#0" expanded="false" />
           </folding>
         </state>
       </provider>
