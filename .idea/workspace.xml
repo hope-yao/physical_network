@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f95bfc-d4b9-4db0-93c9-bb74f4d5cbff" name="Default" comment="finished">
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/Y_dot_10_12112017.mat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/Y_dot_25_12112017.mat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/convergence.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sensitivity_y2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sensitivity_y3.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/DR_RNN.py" afterPath="$PROJECT_DIR$/DR_RNN.py" />
-      <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K1/DR-RNN_K1_2017_12_01_17_38_20/checkpoint" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K1/DR-RNN_K1_2017_12_01_17_38_20/experiment_495.ckpt.data-00000-of-00001" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K1/DR-RNN_K1_2017_12_01_17_38_20/experiment_495.ckpt.index" afterPath="" />
@@ -19,7 +18,6 @@
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.data-00000-of-00001" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.index" afterPath="" />
       <change beforePath="$PROJECT_DIR$/saved_models/DR-RNN_K4/DR-RNN_K4_2017_12_01_19_29_20/experiment_495.ckpt.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,7 +44,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DR_RNN.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DR_RNN.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DR_RNN.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="249">
@@ -64,7 +62,7 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
+            <state relative-caret-position="532">
               <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
               <folding />
             </state>
@@ -95,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
@@ -362,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513035129936</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="finished sensitivity analysis experiment">
+      <created>1513101798466</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1513101798466</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -429,7 +434,8 @@
     <MESSAGE value="add basic readme" />
     <MESSAGE value="tested increasing time steps for DR-RNN" />
     <MESSAGE value="tested extrapolation in time. Found that error goes up very fast." />
-    <option name="LAST_COMMIT_MESSAGE" value="tested extrapolation in time. Found that error goes up very fast." />
+    <MESSAGE value="finished sensitivity analysis experiment" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished sensitivity analysis experiment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -849,6 +855,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DR_RNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#1095#1150#0" expanded="false" />
+            <element signature="e#5072#5106#0" expanded="false" />
+            <element signature="e#9311#10141#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -865,35 +900,6 @@
           <second_editor>
             <js_state />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DR_RNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#1095#1150#0" expanded="false" />
-            <element signature="e#5072#5106#0" expanded="false" />
-            <element signature="e#9311#10141#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
