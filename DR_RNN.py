@@ -63,9 +63,16 @@ class DR_RNN:
                     G = self.gamma * tf.norm(r_tp1, axis=1) + self.zeta * G
                     y_tp1 = y_tp1 - tf.expand_dims(self.eta[k] / tf.sqrt(G + self.eps), 1) * r_tp1
                 self.y_pred = tf.concat([self.y_pred, tf.expand_dims(y_tp1, 1)], 1)
-            self.training_loss = tf.reduce_mean(tf.square(self.y_true - self.y_pred))
+            time_decay = []
+            w_i = 0.9
+            for i in range(self.num_time_steps):
+                w_i = w_i * 0.9
+                time_decay += [w_i]
+            self.training_loss = tf.reduce_mean(
+                tf.reduce_mean(tf.abs(self.y_true - self.y_pred), (0, 2)) * np.asarray(time_decay)[::-1])
+            # self.training_loss = tf.reduce_max(tf.abs(self.y_true - self.y_pred))
 
-    # def build_test_model(self,delta_t_testing):
+    def build_test_model(self):
         self.delta_t_testing = tf.placeholder(tf.float32, shape=())
         self.y_pred_testing = self.y_true[:, 0:1, :]  # initial predictions
         with tf.variable_scope("DR_RNN", reuse=True) as testing:
@@ -147,7 +154,7 @@ class DR_RNN:
                     self.summary_writer.flush()
 
                 if count % 500 == 0:
-                    self.sess.run(tf.assign(self.learning_rate, self.learning_rate * 0.5))
+                    self.sess.run(tf.assign(self.learning_rate, self.learning_rate * 0.8))
                     snapshot_name = "%s_%s" % ('experiment', str(count))
                     self.saver.save(self.sess, "%s/%s.ckpt" % (modeldir, snapshot_name))
                 count += 1
@@ -177,10 +184,11 @@ class DR_RNN:
             plt.show()
 
     def extrapolation_in_time(self):
+        delta_t = self.delta_t
         y_test_new = self.sess.run(self.y_pred_testing,
-                                   {self.y_true: self.y_test_data[:self.batch_size], self.delta_t_testing: self.delta_t})
+                                   {self.y_true: self.y_test_data[:self.batch_size], self.delta_t_testing: delta_t})
         y_test_new_new = self.sess.run(self.y_pred_testing, {self.y_true: y_test_new[:self.batch_size, ::-1, :],
-                                                             self.delta_t_testing: self.delta_t})
+                                                             self.delta_t_testing: delta_t})
         tt_y = np.concatenate([y_test_new, y_test_new_new], 1)
         idx = 1
         plt.plot(np.arange(0, (tt_y.shape[1] - 0.5) * self.delta_t, self.delta_t), tt_y[0, :, idx], 'r',
@@ -188,6 +196,7 @@ class DR_RNN:
         plt.plot(np.arange(0, (tt_y.shape[1] - 0.5) * self.delta_t, self.delta_t), self.y_test_all[0, :tt_y.shape[1], idx],
                  'b', label='ODE45')
         plt.legend()
+        plt.axvspan(self.num_time_steps*self.delta_t, self.num_time_steps*self.delta_t*2, facecolor='g', alpha=0.5)
         plt.show()
 
     def save_data(self,dist_viz=0):
@@ -196,7 +205,7 @@ class DR_RNN:
         np.save(self.logdir + '/k{}_train_drrnn.npy'.format(k),
                 self.sess.run(self.y_pred, {self.y_true: self.y_test_data[:self.batch_size]}))
         np.save(self.logdir + '/k{}_test_drrnn.npy'.format(k),
-                self.sess.run(self.y_pred_testing, {self.y_true: self.y_test_data[:self.batch_size],self.delta_t_testing:delta_t_testing}))
+                self.sess.run(self.y_pred_testing, {self.y_true: self.y_test_data[:self.batch_size],self.delta_t_testing:self.delta_t}))
         np.save(self.logdir + '/k{}_numerical.npy'.format(k), self.y_test_data[:self.batch_size])
 
         if dist_viz:
@@ -218,17 +227,17 @@ class DR_RNN:
         cc = self.sess.run(self.y_pred_testing, {self.y_true: self.y_test_data[:self.batch_size],self.delta_t_testing:delta_t_testing})
         idx = 1
         fig  = plt.figure()
-        plt.plot(np.arange(0,10+delta_t_training,delta_t_training), aa[0, :, idx], 'k', label='k{}_numerical'.format(self.num_layers))
-        plt.plot(np.arange(0,10+delta_t_training,delta_t_training), bb[0, :, idx], 'b', label='k{}_train_drrnn'.format(self.num_layers))
-        plt.plot(np.arange(0,100.5*delta_t_testing,delta_t_testing), cc[0, :, idx], 'r', label='k{}_test_drrnn'.format(self.num_layers))
+        plt.plot(np.arange(0,self.num_time_steps,1)*delta_t_training, aa[0, :, idx], 'k', label='k{}_numerical'.format(self.num_layers))
+        plt.plot(np.arange(0,self.num_time_steps,1)*delta_t_training, bb[0, :, idx], 'b', label='k{}_train_drrnn'.format(self.num_layers))
+        plt.plot(np.arange(0,self.num_time_steps,1)*delta_t_testing, cc[0, :, idx], 'r', label='k{}_test_drrnn'.format(self.num_layers))
         plt.legend()
         plt.xlabel('physical time')
         plt.ylabel('y{}'.format(idx))
-        ttl_name = 'itr:{:d}  '.format(101)+'train_err:{0:.4e}  '.format(self.training_loss_value) + 'test_err:{0:4e}'.format(self.testing_loss_value)
+        ttl_name = 'itr:{:d}  '.format(count)+'train_err:{0:.4e}  '.format(self.training_loss_value) + 'test_err:{0:4e}'.format(self.testing_loss_value)
         plt.title(ttl_name)
-        plt.axis([0,10,0,1.2])
+        # plt.axis([0,10,0,1.2])
         plt.show()
-        fig.savefig(self.logdir+'/mov/iter{}.png'.format(count))
+        fig.savefig(self.logdir+'/iter{}.png'.format(count))
 
         if dist_viz:
             plt.figure()
@@ -244,14 +253,14 @@ class DR_RNN:
 if __name__ == "__main__":
     cfg = {'delta_t': 1e-1,
            'time_start': 0,
-           'time_end': 10,
+           'time_end': 15,
            'num_y': 3,
            'num_layers': 2,
            'gamma': 0.1,
            'zeta': 0.9,
            'eps': 1e-8,
-           'lr': 0.1,  # 0.2 for DR_RNN_4, 1.0 for DR_RNN_1,2
-           'num_epochs': 15*4,
+           'lr': 0.1,  # 0.2 for DR_RNN_1, 0.1 for DR_RNN_2 and 3, ??? for DR_RNN_4,
+           'num_epochs': 15*20,
            'batch_size': 16,
            'data_fn': './data/Y_dot_25_12112017.mat',  # './data/problem1.npz'
            }
@@ -262,11 +271,8 @@ if __name__ == "__main__":
 
     drrnn = DR_RNN(cfg)
     drrnn.build_training_model()
-    # drrnn.build_test_model(drrnn.delta_t)
+    drrnn.build_test_model()
     drrnn.training_init()
-
-    # delta_t_testing = drrnn.delta_t*1.
-    # drrnn.build_test_model(delta_t_testing)
 
     drrnn.train_model()
     print('done')

@@ -3,7 +3,7 @@
 Tensorflow implementation of [DR-RNN: A deep residual recurrent neural network for model reduction](https://arxiv.org/abs/1709.00939).
 
 ![convergence](./assets/convergence.png)
-
+> convergence for DR_RNN_2 with Adam optimizer and learning rate = 0.1. We half lr every 500 iterations.
 
 # Result
 Reproduced result of Fig.2 from [the paper](https://arxiv.org/abs/1709.00939)
@@ -16,10 +16,10 @@ Results for increasing time steps in DR-RNN
 ![increase_time_steps](./assets/increase_time_steps.png)
 
 Extrapolation in time, from 10s to 20s.
-iter:744  train_cost: 1.49850947651e-07  test_cost: 0.00102584168781
-extrapolation of y1
 
 ![extrapolation_in_time](./assets/extrapolation_in_time.png)
+> iter:744  train_cost: 1.49850947651e-07  test_cost: 0.00102584168781
+extrapolation of y1
 
 Sensitivity analysis. Partial derivative of predicted y w.r.t. x.
 
