@@ -36,12 +36,14 @@ class DR_RNN:
         return self.y[rand_idx[:500]], self.y[rand_idx[500:]] # 500,1000 split as in the paper
 
     def get_residual(self, y_tp1, y_t, delta_t):
-        er1 = y_tp1[:, 0] - y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]
-        er2 = y_tp1[:, 1] - y_t[:, 1] + delta_t * y_tp1[:, 1] * y_tp1[:, 2]
-        er3 = y_tp1[:, 2] - y_t[:, 2] - delta_t * (-y_tp1[:, 0] ** 2 + y_tp1[:, 1] ** 2)
+        er1 = y_tp1[:, 0] - y_t[:, 0] - delta_t * self.ode_para[0]*y_tp1[:, 0] * y_tp1[:, 2]
+        er2 = y_tp1[:, 1] - y_t[:, 1] + delta_t * self.ode_para[1]*y_tp1[:, 1] * y_tp1[:, 2]
+        er3 = y_tp1[:, 2] - y_t[:, 2] - delta_t * (-self.ode_para[2]*y_tp1[:, 0] ** 2 + y_tp1[:, 1] ** 2)
         return tf.stack([er1, er2, er3], 1)
 
     def build_training_model(self):
+        # self.ode_para = tf.Variable([0., 0., 0.], name='ode_para')
+        self.ode_para = tf.Variable(tf.truncated_normal([3, ], stddev=0.1), name='ode_para')
 
         self.weight_w = tf.Variable(tf.truncated_normal([3, ], stddev=0.1), name='weight_w')
         self.weight_u = tf.constant(1., name='weight_u')  # tf.truncated_normal([1,], stddev=0.1)
@@ -71,6 +73,8 @@ class DR_RNN:
             self.training_loss = tf.reduce_mean(
                 tf.reduce_mean(tf.abs(self.y_true - self.y_pred), (0, 2)) * np.asarray(time_decay)[::-1])
             # self.training_loss = tf.reduce_max(tf.abs(self.y_true - self.y_pred))
+            ref_val = tf.ones_like(self.ode_para)
+            self.ode_para_err = tf.reduce_mean(tf.abs(ref_val - self.ode_para) / tf.abs(ref_val))
 
     def build_test_model(self):
         self.delta_t_testing = tf.placeholder(tf.float32, shape=())
@@ -98,7 +102,7 @@ class DR_RNN:
         ## OPTIMIZER ## note: both optimizer and learning rate is not found in the paper
         self.learning_rate = tf.Variable(self.lr)  # learning rate for optimizer
         optimizer = tf.train.AdamOptimizer(self.learning_rate, beta1=0.5)
-        grads = optimizer.compute_gradients(self.training_loss, [self.weight_w, self.eta])
+        grads = optimizer.compute_gradients(self.training_loss, [self.weight_w, self.eta, self.ode_para])
         # for i,(g,v) in enumerate(grads):
         #     if g is not None:
         #         grads[i]=(tf.clip_by_norm(g,5),v) # clip gradients
@@ -108,10 +112,12 @@ class DR_RNN:
         self.summary_writer = tf.summary.FileWriter(self.logdir)
         self.summary_op_training = tf.summary.merge([
             tf.summary.scalar("loss/training_loss", self.training_loss),
+            tf.summary.scalar("ODE/training_ode_para_err", self.ode_para_err),
             tf.summary.scalar("lr/lr", self.learning_rate),
         ])
         self.summary_op_testing = tf.summary.merge([
             tf.summary.scalar("loss/testing_loss", self.testing_loss),
+            tf.summary.scalar("ODE/testing_ode_para_err", self.ode_para_err),
         ])
 
         ## graph initialization ###
@@ -142,11 +148,11 @@ class DR_RNN:
                 self.sess.run(self.train_op, {self.y_true: y_input})
 
                 if count % 10 == 0:
-                    self.training_loss_value = self.sess.run(self.training_loss, {self.y_true: y_input})
+                    self.training_loss_value, self.ode_para_value = self.sess.run([self.training_loss, self.ode_para], {self.y_true: y_input})
                     # rand_idx = np.random.random_integers(0, len(y_test) - 1, size=self.batch_size)
                     rand_idx = np.arange(0,self.batch_size,1)
                     self.testing_loss_value = self.sess.run(self.testing_loss, {self.y_true: self.y_test_data[rand_idx], self.delta_t_testing:self.delta_t})
-                    print("iter:{}  train_cost: {}  test_cost: {} ".format(count, self.training_loss_value, self.testing_loss_value))
+                    print("iter:{}  train_cost: {}  test_cost: {} ode_paras:{}".format(count, self.training_loss_value, self.testing_loss_value,self.ode_para_value))
                     training_summary, testing_summary = self.sess.run([self.summary_op_training,self.summary_op_testing],
                                                                       {self.y_true: self.y_test_data[rand_idx], self.delta_t_testing:self.delta_t})
                     self.summary_writer.add_summary(training_summary, count)
