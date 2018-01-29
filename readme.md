@@ -5,6 +5,16 @@ Tensorflow implementation of [DR-RNN: A deep residual recurrent neural network f
 ![convergence](./assets/convergence.png)
 > convergence for DR_RNN_2 with Adam optimizer and learning rate = 0.1. We half lr every 500 iterations.
 
+To execute the code, simply run:
+```
+$ python DR_RNN.py
+```
+To monitor the training process, run:
+```
+$ tensorboard --logdir=./saved_logs
+```
+
+
 # Result
 Reproduced result of Fig.2 from [the paper](https://arxiv.org/abs/1709.00939)
 
@@ -27,9 +37,14 @@ Sensitivity analysis. Partial derivative of predicted y w.r.t. x.
 ![sensitivity_y3](./assets/sensitivity_y3.png)
 > This result is obtained from DR_RNN_2, at iter:1300, when train_cost=1.52661107222e-06 and test_cost=0.00327986711636
 
+Parameter estimation. When parameter is unknown but fixed:
+
+When parameter is an unknown distribution:
+
 # Todo
 - [x] extrapolation in time
 - [x] larger time step
+- [ ] parameter estimation
 - [ ] scalability with y
 - [ ] include mapping from x to y
 - [x] compute sensitivity w.r.t x for control purpose
