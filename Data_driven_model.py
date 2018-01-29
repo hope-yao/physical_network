@@ -9,8 +9,8 @@ def my_rnn(y_true, num_layers, n_times_latentdim=1, training=True):
     for t in range(time_steps - 1):
 
         if training:
-            y_t = y_true[:, t, :]
-            # y_t = y_pred[:, -1, :]
+            # y_t = y_true[:, t, :]
+            y_t = y_pred[:, -1, :]
         else:
             y_t = y_pred[:, -1, :]
 

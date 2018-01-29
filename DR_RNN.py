@@ -115,7 +115,7 @@ class DR_RNN:
             self.training_loss = tf.reduce_mean(
                 tf.reduce_mean(tf.abs(self.y_true - self.y_pred), (0, 2)) * np.asarray(time_decay)[::-1])
         else:
-            self.training_loss = tf.reduce_max(tf.square(self.y_true - self.y_pred))
+            self.training_loss = tf.reduce_mean(tf.square(self.y_true - self.y_pred))
 
 
         # self.ode_para_mean_err = tf.reduce_mean(tf.abs((self.ode_para_mean_ref - self.ode_para_mean) / (self.ode_para_mean_ref+1e-8)))
@@ -169,20 +169,6 @@ class DR_RNN:
         #         grads[i]=(tf.clip_by_norm(g,5),v) # clip gradients
         self.train_op = optimizer.apply_gradients(grads)
 
-        ## Monitor ##
-        self.summary_writer = tf.summary.FileWriter(self.logdir)
-        self.summary_op_training = tf.summary.merge([
-            tf.summary.scalar("loss/training_loss", self.training_loss),
-            # tf.summary.scalar("ODE/training_ode_para_mean_err", self.ode_para_mean_err),
-            # tf.summary.scalar("ODE/training_ode_para_var_err", self.ode_para_var_err),
-            tf.summary.scalar("lr/lr", self.learning_rate),
-        ])
-        self.summary_op_testing = tf.summary.merge([
-            tf.summary.scalar("loss/testing_loss", self.testing_loss),
-            # tf.summary.scalar("ODE/testing_ode_para_mean_err", self.ode_para_mean_err),
-            # tf.summary.scalar("ODE/testing_ode_para_var_err", self.ode_para_var_err),
-        ])
-
         ## graph initialization ###
         FLAGS = tf.app.flags.FLAGS
         tfconfig = tf.ConfigProto(
@@ -195,6 +181,21 @@ class DR_RNN:
         self.sess.run(init)
         tf.train.write_graph(self.sess.graph, logdir, 'train.pbtxt')
         self.saver = tf.train.Saver()
+
+        ## Monitor ##
+        self.summary_writer = tf.summary.FileWriter(self.logdir, self.sess.graph)
+        self.summary_op_training = tf.summary.merge([
+            tf.summary.scalar("loss/training_loss", self.training_loss),
+            # tf.summary.scalar("ODE/training_ode_para_mean_err", self.ode_para_mean_err),
+            # tf.summary.scalar("ODE/training_ode_para_var_err", self.ode_para_var_err),
+            tf.summary.scalar("lr/lr", self.learning_rate),
+        ])
+        self.summary_op_testing = tf.summary.merge([
+            tf.summary.scalar("loss/testing_loss", self.testing_loss),
+            # tf.summary.scalar("ODE/testing_ode_para_mean_err", self.ode_para_mean_err),
+            # tf.summary.scalar("ODE/testing_ode_para_var_err", self.ode_para_var_err),
+        ])
+
 
     def restore_model(self):
         file_path = './saved_models/DR-RNN_K2/DR-RNN_K2_2018_01_04_22_04_56/experiment_50000.ckpt'
@@ -338,16 +339,16 @@ class DR_RNN:
 
 if __name__ == "__main__":
     cfg = {
-           'model': 'RNN',#'LSTM','DR_RNN',
+           'model': 'DR_RNN',#RNN, 'LSTM','DR_RNN',
            'delta_t': 1e-1,
            'time_start': 0,
            'time_end': 15,
            'num_y': 3,
-           'num_layers': 4,
+           'num_layers': 2,
            'gamma': 0.1,
            'zeta': 0.9,
            'eps': 1e-8,
-           'lr': 0.0001,  # 0.2 for DR_RNN_1, 0.1 for DR_RNN_2 and 3, ??? for DR_RNN_4,
+           'lr': 0.01,  # 0.2 for DR_RNN_1, 0.1 for DR_RNN_2 and 3, ??? for DR_RNN_4,
            'num_epochs': 15*200,
            'batch_size': 64,
            'data_fn': './data/Y_dot_25_12112017.mat',  # './data/problem1.npz'
