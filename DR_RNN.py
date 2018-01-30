@@ -71,8 +71,7 @@ class DR_RNN:
         self.ode_para = self.ode_para_mean + self.ode_para_var * eps
 
         self.weight_w = tf.Variable(tf.truncated_normal([self.num_y, ], mean=1, stddev=0.1), name='weight_w')
-        # self.weight_u = tf.Variable(tf.truncated_normal([self.num_y, self.num_y], stddev=0.1), name='weight_u')
-        self.weight_u = tf.constant(1., name='weight_u')
+        self.weight_u = tf.Variable(tf.truncated_normal([self.num_y, self.num_y], stddev=0.1), name='weight_u')
         self.eta = tf.Variable(tf.random_uniform([self.num_layers - 1, ], minval=0.1,maxval=0.4), name='eta')
         self.y_true = tf.placeholder(tf.float32, shape=(self.batch_size, self.num_time_steps, self.num_y))
 
@@ -82,15 +81,14 @@ class DR_RNN:
                 for t in range(self.num_time_steps - 1):
                     y_t = self.y_pred[:, -1, :]
                     y_tp1 = y_t  # initial guess for the value in next time step
-                    r_tp1 = self.get_residual(y_tp1, self.y_true[:, t, :], self.delta_t)
+                    r_tp1 = self.get_residual(y_tp1, y_t, self.delta_t)
                     # first layer
-                    y_tp1 = y_tp1 - self.weight_w * tf.nn.tanh(self.weight_u * r_tp1)
-                    # y_tp1 = y_tp1 - tf.multiply(self.weight_w, tf.nn.tanh(
-                    #     tf.transpose(tf.matmul(self.weight_u, tf.transpose(r_tp1, (1, 0))), (1, 0)))) #corrected
+                    y_tp1 = y_tp1 - tf.multiply(self.weight_w, tf.nn.tanh(
+                        tf.transpose(tf.matmul(self.weight_u, tf.transpose(r_tp1, (1, 0))), (1, 0)))) #corrected
                     # following layers
                     G = tf.square(tf.norm(r_tp1, axis=1))  # which is not specified in the paper
                     for k in range(self.num_layers - 1):
-                        r_tp1 = self.get_residual(y_tp1, self.y_true[:, t, :], self.delta_t)
+                        r_tp1 = self.get_residual(y_tp1, y_t, self.delta_t)
                         G = self.gamma * tf.norm(r_tp1, axis=1) + self.zeta * G #missing square
                         y_tp1 = y_tp1 - tf.expand_dims(self.eta[k] / tf.sqrt(G + self.eps), 1) * r_tp1
                     self.y_pred = tf.concat([self.y_pred, tf.expand_dims(y_tp1, 1)], 1)
@@ -125,14 +123,13 @@ class DR_RNN:
                     y_tp1_testing = y_t_testing  # initial guess for the value in next time step
                     r_tp1_testing = self.get_residual(y_tp1_testing, y_t_testing, self.delta_t_testing)
                     # first layer
-                    y_tp1_testing = y_tp1_testing - self.weight_w * tf.nn.tanh(self.weight_u * r_tp1_testing)
-                    # y_tp1_testing = y_tp1_testing - tf.multiply(self.weight_w, tf.nn.tanh(
-                    #     tf.transpose(tf.matmul(self.weight_u, tf.transpose(r_tp1_testing, (1, 0))), (1, 0))))
+                    y_tp1_testing = y_tp1_testing - tf.multiply(self.weight_w, tf.nn.tanh(
+                        tf.transpose(tf.matmul(self.weight_u, tf.transpose(r_tp1_testing, (1, 0))), (1, 0))))
                     # following layers
                     G_testing = tf.square(tf.norm(r_tp1_testing, axis=1))  # which is not specified in the paper
                     for k in range(self.num_layers - 1):
                         r_tp1_testing = self.get_residual(y_tp1_testing, y_t_testing, self.delta_t_testing)
-                        G_testing = self.gamma * tf.square(tf.norm(r_tp1_testing, axis=1)) + self.zeta * G_testing
+                        G_testing = self.gamma * tf.norm(r_tp1_testing, axis=1) + self.zeta * G_testing
                         y_tp1_testing = y_tp1_testing - tf.expand_dims(self.eta[k] / tf.sqrt(G_testing + self.eps),
                                                                        1) * r_tp1_testing
                     self.y_pred_testing = tf.concat([self.y_pred_testing, tf.expand_dims(y_tp1_testing, 1)], 1)
@@ -348,7 +345,7 @@ if __name__ == "__main__":
            'time_start': 0,
            'time_end': 10,
            'num_y': 6,
-           'num_layers': 4,
+           'num_layers': 10,
            'gamma': 0.1,
            'zeta': 0.9,
            'eps': 1e-8,
@@ -356,7 +353,7 @@ if __name__ == "__main__":
            'num_epochs': 15*200,
            'batch_size': 64,
            'data_fn': './data/3dof_sys_l.mat',  # './data/problem1.npz'
-           'n_times_latentdim': 10,
+           'n_times_latentdim': 1,
            }
     logdir, modeldir = creat_dir(cfg['model']+"_K{}".format(cfg['num_layers']))
     copyfile('DR_RNN.py', modeldir + '/' + 'DR_RNN.py')
