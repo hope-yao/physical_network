@@ -71,7 +71,8 @@ class DR_RNN:
         self.ode_para = self.ode_para_mean + self.ode_para_var * eps
 
         self.weight_w = tf.Variable(tf.truncated_normal([self.num_y, ], mean=1, stddev=0.1), name='weight_w')
-        self.weight_u = tf.Variable(tf.truncated_normal([self.num_y, self.num_y], stddev=0.1), name='weight_u')
+        # self.weight_u = tf.Variable(tf.truncated_normal([self.num_y, self.num_y], stddev=0.1), name='weight_u')
+        self.weight_u = tf.constant(1., name='weight_u')
         self.eta = tf.Variable(tf.random_uniform([self.num_layers - 1, ], minval=0.1,maxval=0.4), name='eta')
         self.y_true = tf.placeholder(tf.float32, shape=(self.batch_size, self.num_time_steps, self.num_y))
 
@@ -83,8 +84,9 @@ class DR_RNN:
                     y_tp1 = y_t  # initial guess for the value in next time step
                     r_tp1 = self.get_residual(y_tp1, self.y_true[:, t, :], self.delta_t)
                     # first layer
-                    y_tp1 = y_tp1 - tf.multiply(self.weight_w, tf.nn.tanh(
-                        tf.transpose(tf.matmul(self.weight_u, tf.transpose(r_tp1, (1, 0))), (1, 0)))) #corrected
+                    y_tp1 = y_tp1 - self.weight_w * tf.nn.tanh(self.weight_u * r_tp1)
+                    # y_tp1 = y_tp1 - tf.multiply(self.weight_w, tf.nn.tanh(
+                    #     tf.transpose(tf.matmul(self.weight_u, tf.transpose(r_tp1, (1, 0))), (1, 0)))) #corrected
                     # following layers
                     G = tf.square(tf.norm(r_tp1, axis=1))  # which is not specified in the paper
                     for k in range(self.num_layers - 1):
@@ -111,7 +113,7 @@ class DR_RNN:
             self.training_loss = tf.reduce_mean(
                 tf.reduce_mean(tf.abs(self.y_true - self.y_pred), (0, 2)) * np.asarray(time_decay)[::-1])
         else:
-            self.training_loss = tf.reduce_mean(tf.square(self.y_true - self.y_pred))
+            self.training_loss = tf.reduce_mean(tf.abs(self.y_true - self.y_pred))
 
     def build_test_model(self):
         self.delta_t_testing = tf.placeholder(tf.float32, shape=())
@@ -123,8 +125,9 @@ class DR_RNN:
                     y_tp1_testing = y_t_testing  # initial guess for the value in next time step
                     r_tp1_testing = self.get_residual(y_tp1_testing, y_t_testing, self.delta_t_testing)
                     # first layer
-                    y_tp1_testing = y_tp1_testing - tf.multiply(self.weight_w, tf.nn.tanh(
-                        tf.transpose(tf.matmul(self.weight_u, tf.transpose(r_tp1_testing, (1, 0))), (1, 0))))
+                    y_tp1_testing = y_tp1_testing - self.weight_w * tf.nn.tanh(self.weight_u * r_tp1_testing)
+                    # y_tp1_testing = y_tp1_testing - tf.multiply(self.weight_w, tf.nn.tanh(
+                    #     tf.transpose(tf.matmul(self.weight_u, tf.transpose(r_tp1_testing, (1, 0))), (1, 0))))
                     # following layers
                     G_testing = tf.square(tf.norm(r_tp1_testing, axis=1))  # which is not specified in the paper
                     for k in range(self.num_layers - 1):

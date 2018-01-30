@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f95bfc-d4b9-4db0-93c9-bb74f4d5cbff" name="Default" comment="constant unknown parameter estimation seems okay, but need more data to verify">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/3dof_sys_l.mat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DR_RNN.py" afterPath="$PROJECT_DIR$/DR_RNN.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/DR_RNN.py" afterPath="$PROJECT_DIR$/DR_RNN.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,75 +31,13 @@
     <expand />
     <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="physical_network" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DR_RNN.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DR_RNN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="296" column="17" selection-start-line="296" selection-start-column="17" selection-end-line="296" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-                <element signature="e#243#848#0" expanded="false" />
-                <element signature="e#1098#1153#0" expanded="false" />
-                <element signature="e#6411#6445#0" expanded="false" />
-                <element signature="e#9575#9605#0" expanded="false" />
-                <element signature="e#9699#10603#0" expanded="false" />
-                <element signature="e#9905#10387#0" expanded="false" />
-                <element signature="e#10180#10246#0" expanded="false" />
-                <element signature="e#10281#10387#0" expanded="false" />
-                <element signature="e#10433#10603#0" expanded="false" />
-                <element signature="e#10906#11050#0" expanded="false" />
-                <element signature="e#12175#12669#0" expanded="false" />
-                <element signature="e#12238#12444#0" expanded="false" />
-                <element signature="e#12251#12444#0" expanded="false" />
-                <element signature="e#12287#12442#0" expanded="false" />
-                <element signature="e#12501#12669#0" expanded="false" />
-                <element signature="e#12762#12817#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backend_qt5agg.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/backends/backend_qt5agg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_tqdm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tqdm/_tqdm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="threading.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/threading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11595">
-              <caret line="773" column="0" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PDE_net.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PDE_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="177" column="22" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="261" column="19" lean-forward="false" selection-start-line="261" selection-start-column="19" selection-end-line="261" selection-end-column="19" />
               <folding>
                 <element signature="e#884#1290#0" expanded="false" />
                 <element signature="e#1096#1151#0" expanded="false" />
@@ -131,17 +68,222 @@
                 <element signature="e#11391#13142#0" expanded="false" />
                 <element signature="e#11391#11446#0" expanded="false" />
                 <element signature="e#12733#13142#0" expanded="false" />
-                <element signature="e#13182#13616#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils.py">
+      <file leaf-file-name="DR_RNN.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DR_RNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+            <state relative-caret-position="212">
+              <caret line="105" column="17" lean-forward="false" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/rnn/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="63" column="64" lean-forward="false" selection-start-line="63" selection-start-column="64" selection-end-line="63" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="core_rnn_cell_impl.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/rnn/python/ops/core_rnn_cell_impl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-274">
+              <caret line="257" column="2" lean-forward="false" selection-start-line="257" selection-start-column="2" selection-end-line="257" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="e#1909#4173#0" expanded="false" />
+                <element signature="e#2024#4173#0" expanded="false" />
+                <element signature="e#2095#3306#0" expanded="false" />
+                <element signature="e#2213#3306#0" expanded="false" />
+                <element signature="e#2243#3198#0" expanded="false" />
+                <element signature="e#3214#3304#0" expanded="false" />
+                <element signature="e#3323#4015#0" expanded="false" />
+                <element signature="e#3364#3494#0" expanded="false" />
+                <element signature="e#3583#4015#0" expanded="false" />
+                <element signature="e#3613#3978#0" expanded="false" />
+                <element signature="e#4207#4963#0" expanded="false" />
+                <element signature="e#4322#4510#0" expanded="false" />
+                <element signature="e#4552#4574#0" expanded="false" />
+                <element signature="e#4617#4639#0" expanded="false" />
+                <element signature="e#4694#4963#0" expanded="false" />
+                <element signature="e#4852#4937#0" expanded="false" />
+                <element signature="e#4992#6203#0" expanded="false" />
+                <element signature="e#5146#5334#0" expanded="false" />
+                <element signature="e#5376#5398#0" expanded="false" />
+                <element signature="e#5441#5463#0" expanded="false" />
+                <element signature="e#5518#6203#0" expanded="false" />
+                <element signature="e#5647#6179#0" expanded="false" />
+                <element signature="e#5719#5979#0" expanded="false" />
+                <element signature="e#6031#6141#0" expanded="false" />
+                <element signature="e#6320#6726#0" expanded="false" />
+                <element signature="e#6320#6493#1" expanded="false" />
+                <element signature="e#6547#6726#0" expanded="false" />
+                <element signature="e#6598#6707#0" expanded="false" />
+                <element signature="e#7347#8504#0" expanded="false" />
+                <element signature="e#7347#8060#1" expanded="false" />
+                <element signature="e#8094#8233#0" expanded="false" />
+                <element signature="e#8107#8226#0" expanded="false" />
+                <element signature="e#8546#8664#0" expanded="false" />
+                <element signature="e#8707#8729#0" expanded="false" />
+                <element signature="e#10704#13742#0" expanded="false" />
+                <element signature="e#10704#12404#1" expanded="false" />
+                <element signature="e#12438#12577#0" expanded="false" />
+                <element signature="e#12451#12570#0" expanded="false" />
+                <element signature="e#12754#12966#0" expanded="false" />
+                <element signature="e#12778#12959#0" expanded="false" />
+                <element signature="e#13418#13574#0" expanded="false" />
+                <element signature="e#13591#13742#0" expanded="false" />
+                <element signature="e#13784#13807#0" expanded="false" />
+                <element signature="e#13850#13874#0" expanded="false" />
+                <element signature="e#13929#17865#0" expanded="false" />
+                <element signature="e#13929#14905#1" expanded="false" />
+                <element signature="e#15060#15198#0" expanded="false" />
+                <element signature="e#15562#17727#0" expanded="false" />
+                <element signature="e#15608#15733#0" expanded="false" />
+                <element signature="e#16046#16506#0" expanded="false" />
+                <element signature="e#16112#16506#0" expanded="false" />
+                <element signature="e#16546#16679#0" expanded="false" />
+                <element signature="e#16700#16793#0" expanded="false" />
+                <element signature="e#16841#17010#0" expanded="false" />
+                <element signature="e#17204#17727#0" expanded="false" />
+                <element signature="e#17266#17502#0" expanded="false" />
+                <element signature="e#17316#17449#0" expanded="false" />
+                <element signature="e#17554#17727#0" expanded="false" />
+                <element signature="e#17910#19828#0" expanded="false" />
+                <element signature="e#17910#18233#1" expanded="false" />
+                <element signature="e#18292#19085#0" expanded="false" />
+                <element signature="e#18292#18802#1" expanded="false" />
+                <element signature="e#19127#19155#0" expanded="false" />
+                <element signature="e#19198#19222#0" expanded="false" />
+                <element signature="e#19271#19401#0" expanded="false" />
+                <element signature="e#19456#19828#0" expanded="false" />
+                <element signature="e#19872#21380#0" expanded="false" />
+                <element signature="e#19872#20149#1" expanded="false" />
+                <element signature="e#20210#20748#0" expanded="false" />
+                <element signature="e#20210#20495#1" expanded="false" />
+                <element signature="e#20790#20818#0" expanded="false" />
+                <element signature="e#20861#20890#0" expanded="false" />
+                <element signature="e#20939#21069#0" expanded="false" />
+                <element signature="e#21124#21380#0" expanded="false" />
+                <element signature="e#21441#21638#0" expanded="false" />
+                <element signature="e#21504#21578#0" expanded="false" />
+                <element signature="e#21674#28910#0" expanded="false" />
+                <element signature="e#21941#26425#0" expanded="false" />
+                <element signature="e#21941#23806#1" expanded="false" />
+                <element signature="e#23960#24726#0" expanded="false" />
+                <element signature="e#23999#24144#0" expanded="false" />
+                <element signature="e#24169#24335#0" expanded="false" />
+                <element signature="e#24345#24726#0" expanded="false" />
+                <element signature="e#24445#24661#0" expanded="false" />
+                <element signature="e#24494#24604#0" expanded="false" />
+                <element signature="e#25058#26425#0" expanded="false" />
+                <element signature="e#25084#25172#0" expanded="false" />
+                <element signature="e#25219#25458#0" expanded="false" />
+                <element signature="e#25219#25271#0" expanded="false" />
+                <element signature="e#25506#25617#0" expanded="false" />
+                <element signature="e#25732#26086#0" expanded="false" />
+                <element signature="e#25765#25917#0" expanded="false" />
+                <element signature="e#25797#25916#0" expanded="false" />
+                <element signature="e#26474#26679#0" expanded="false" />
+                <element signature="e#26721#26749#0" expanded="false" />
+                <element signature="e#26792#26821#0" expanded="false" />
+                <element signature="e#26870#27000#0" expanded="false" />
+                <element signature="e#27095#27459#0" expanded="false" />
+                <element signature="e#27536#28020#0" expanded="false" />
+                <element signature="e#27654#27832#0" expanded="false" />
+                <element signature="e#27681#27776#0" expanded="false" />
+                <element signature="e#27849#28020#0" expanded="false" />
+                <element signature="e#27879#27947#0" expanded="false" />
+                <element signature="e#28075#28910#0" expanded="false" />
+                <element signature="e#28156#28198#0" expanded="false" />
+                <element signature="e#28253#28402#0" expanded="false" />
+                <element signature="e#28513#28674#0" expanded="false" />
+                <element signature="e#28729#28881#0" expanded="false" />
+                <element signature="e#28947#30362#0" expanded="false" />
+                <element signature="e#29053#29177#0" expanded="false" />
+                <element signature="e#29053#29155#1" expanded="false" />
+                <element signature="e#29219#29247#0" expanded="false" />
+                <element signature="e#29290#29319#0" expanded="false" />
+                <element signature="e#29368#29498#0" expanded="false" />
+                <element signature="e#29553#30362#0" expanded="false" />
+                <element signature="e#29553#29934#1" expanded="false" />
+                <element signature="e#30117#30175#0" expanded="false" />
+                <element signature="e#30397#31315#0" expanded="false" />
+                <element signature="e#30506#30813#0" expanded="false" />
+                <element signature="e#30506#30765#1" expanded="false" />
+                <element signature="e#30855#30883#0" expanded="false" />
+                <element signature="e#30926#30955#0" expanded="false" />
+                <element signature="e#31004#31134#0" expanded="false" />
+                <element signature="e#31189#31315#0" expanded="false" />
+                <element signature="e#31353#34372#0" expanded="false" />
+                <element signature="e#31353#31650#1" expanded="false" />
+                <element signature="e#31764#32983#0" expanded="false" />
+                <element signature="e#31764#32506#1" expanded="false" />
+                <element signature="e#32665#32811#0" expanded="false" />
+                <element signature="e#32682#32772#0" expanded="false" />
+                <element signature="e#33025#33053#0" expanded="false" />
+                <element signature="e#33096#33125#0" expanded="false" />
+                <element signature="e#33174#33304#0" expanded="false" />
+                <element signature="e#33359#34372#0" expanded="false" />
+                <element signature="e#33484#34333#0" expanded="false" />
+                <element signature="e#33519#34333#0" expanded="false" />
+                <element signature="e#33717#33929#0" expanded="false" />
+                <element signature="e#34406#37433#0" expanded="false" />
+                <element signature="e#34524#35676#0" expanded="false" />
+                <element signature="e#34524#35077#1" expanded="false" />
+                <element signature="e#35213#35294#0" expanded="false" />
+                <element signature="e#35395#35676#0" expanded="false" />
+                <element signature="e#35464#35676#0" expanded="false" />
+                <element signature="e#35481#35607#0" expanded="false" />
+                <element signature="e#35718#35872#0" expanded="false" />
+                <element signature="e#35915#35949#0" expanded="false" />
+                <element signature="e#35998#36414#0" expanded="false" />
+                <element signature="e#36081#36414#0" expanded="false" />
+                <element signature="e#36207#36414#0" expanded="false" />
+                <element signature="e#36207#36269#0" expanded="false" />
+                <element signature="e#36469#37433#0" expanded="false" />
+                <element signature="e#36594#37286#0" expanded="false" />
+                <element signature="e#36710#37286#0" expanded="false" />
+                <element signature="e#36759#37286#0" expanded="false" />
+                <element signature="e#36796#37023#0" expanded="false" />
+                <element signature="e#36842#36990#0" expanded="false" />
+                <element signature="e#37052#37191#0" expanded="false" />
+                <element signature="e#37467#39018#0" expanded="false" />
+                <element signature="e#37546#38712#0" expanded="false" />
+                <element signature="e#37546#37957#1" expanded="false" />
+                <element signature="e#38422#38548#0" expanded="false" />
+                <element signature="e#38588#38712#0" expanded="false" />
+                <element signature="e#38754#38777#0" expanded="false" />
+                <element signature="e#38820#38844#0" expanded="false" />
+                <element signature="e#38899#39018#0" expanded="false" />
+                <element signature="e#39077#40968#0" expanded="false" />
+                <element signature="e#39077#39606#1" expanded="false" />
+                <element signature="e#39915#40223#0" expanded="false" />
+                <element signature="e#40045#40174#0" expanded="false" />
+                <element signature="e#40062#40153#0" expanded="false" />
+                <element signature="e#40374#40968#0" expanded="false" />
+                <element signature="e#40716#40928#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Euler_backward.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Euler_backward.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="954">
+              <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -152,7 +294,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -165,8 +307,8 @@
       <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15045">
-              <caret line="1020" column="0" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+            <state relative-caret-position="414">
+              <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -241,16 +383,7 @@
     <option name="width" value="1855" />
     <option name="height" value="1084" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -266,28 +399,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physical_network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physical_network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physical_network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="physical_network" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,7 +442,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.DR_RNN">
-    <configuration default="false" name="DR_RNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="DR_RNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -334,9 +458,10 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DR_RNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration default="false" name="session" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="session" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -352,7 +477,8 @@
       <option name="SCRIPT_NAME" value="$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -580,30 +706,40 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="false" />
+    <frame x="1984" y="-4" width="1857" height="1085" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11189956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16994536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5021834" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36666667" sideWeight="0.6408297" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43987343" sideWeight="0.80422163" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.4978166" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42510548" sideWeight="0.3737705" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.4852459" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45464134" sideWeight="0.7382514" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29746836" sideWeight="0.7715847" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33122364" sideWeight="0.49584487" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33122364" sideWeight="0.49125683" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42510548" sideWeight="0.6262295" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38387096" sideWeight="0.81386465" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16509695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="414" height="885" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5021834" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.4978166" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36666667" sideWeight="0.6408297" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43987343" sideWeight="0.80422163" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33122364" sideWeight="0.49584487" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11189956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49806094" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31780365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38387096" sideWeight="0.81386465" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,6 +756,14 @@
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
               </option>
             </State>
           </value>
@@ -665,6 +809,16 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
+        <expression-string>self.visualization(self.delta_t, self.delta_t, count, dist_viz=0)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>modeldir</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>self.ode_para*y_t[:, 0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
@@ -705,41 +859,15 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>tf.expand_dims(self.ode_para,[0,1])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>tf.expand_dims(self.ode_para,[0])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/DR_RNN.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#243#848#0" expanded="false" />
-            <element signature="e#1098#1153#0" expanded="false" />
-            <element signature="e#6411#6445#0" expanded="false" />
-            <element signature="e#9575#9605#0" expanded="false" />
-            <element signature="e#9699#10603#0" expanded="false" />
-            <element signature="e#9905#10387#0" expanded="false" />
-            <element signature="e#10180#10246#0" expanded="false" />
-            <element signature="e#10281#10387#0" expanded="false" />
-            <element signature="e#10433#10603#0" expanded="false" />
-            <element signature="e#10906#11050#0" expanded="false" />
-            <element signature="e#12175#12669#0" expanded="false" />
-            <element signature="e#12238#12444#0" expanded="false" />
-            <element signature="e#12251#12444#0" expanded="false" />
-            <element signature="e#12287#12442#0" expanded="false" />
-            <element signature="e#12501#12669#0" expanded="false" />
-            <element signature="e#12762#12817#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -747,14 +875,14 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30276">
-          <caret line="1682" column="0" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
+          <caret line="1682" column="0" lean-forward="false" selection-start-line="1682" selection-start-column="0" selection-end-line="1682" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7686">
-          <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
+          <caret line="443" column="0" lean-forward="false" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -762,14 +890,14 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/shutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -777,21 +905,21 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$PROJECT_DIR$/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
-          <caret line="76" column="37" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+          <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18054">
-          <caret line="1020" column="0" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
+          <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -799,7 +927,7 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/common_shapes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10854">
-          <caret line="616" column="0" selection-start-line="616" selection-start-column="0" selection-end-line="616" selection-end-column="0" />
+          <caret line="616" column="0" lean-forward="false" selection-start-line="616" selection-start-column="0" selection-end-line="616" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -807,14 +935,14 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/shutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
-          <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
+          <caret line="443" column="0" lean-forward="false" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -822,28 +950,29 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/numpy/lib/npyio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6246">
-          <caret line="369" column="0" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
+          <caret line="369" column="0" lean-forward="false" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Euler_backward.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+        <state relative-caret-position="954">
+          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/tensor_util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5238">
-          <caret line="301" column="0" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/axes/_base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -854,7 +983,7 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="1086" column="0" selection-start-line="1086" selection-start-column="0" selection-end-line="1086" selection-end-column="0" />
+          <caret line="1086" column="0" lean-forward="false" selection-start-line="1086" selection-start-column="0" selection-end-line="1086" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -871,14 +1000,14 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$PROJECT_DIR$/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1692">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -890,16 +1019,10 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_12_17_49_27/iter1364.png" />
     <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K3/DR-RNN_K3_2017_12_12_18_36_59/iter0.png" />
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor>
@@ -907,11 +1030,17 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
           </second_editor>
         </state>
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
-          <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+          <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -927,22 +1056,14 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
-          <caret line="1485" column="0" selection-start-line="1485" selection-start-column="0" selection-end-line="1485" selection-end-column="0" />
+          <caret line="1485" column="0" lean-forward="false" selection-start-line="1485" selection-start-column="0" selection-end-line="1485" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/common_shapes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
-          <caret line="616" column="0" selection-start-line="616" selection-start-column="0" selection-end-line="616" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15045">
-          <caret line="1020" column="0" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
-          <folding />
+          <caret line="616" column="0" lean-forward="false" selection-start-line="616" selection-start-column="0" selection-end-line="616" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -955,8 +1076,8 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$PROJECT_DIR$/assets/extrapolation2.png" />
     <entry file="file://$PROJECT_DIR$/PDE_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="177" column="22" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="261" column="19" lean-forward="false" selection-start-line="261" selection-start-column="19" selection-end-line="261" selection-end-column="19" />
           <folding>
             <element signature="e#884#1290#0" expanded="false" />
             <element signature="e#1096#1151#0" expanded="false" />
@@ -987,7 +1108,6 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
             <element signature="e#11391#13142#0" expanded="false" />
             <element signature="e#11391#11446#0" expanded="false" />
             <element signature="e#12733#13142#0" expanded="false" />
-            <element signature="e#13182#13616#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -995,49 +1115,38 @@ er1 = y_tp1[:, 0] - para1*y_t[:, 0] - delta_t * y_tp1[:, 0] * y_tp1[:, 2]</expre
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11595">
-          <caret line="773" column="0" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
-          <folding />
+          <caret line="773" column="0" lean-forward="false" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tqdm/_tqdm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/backends/backend_qt5agg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="1020" column="0" lean-forward="false" selection-start-line="1020" selection-start-column="0" selection-end-line="1020" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DR_RNN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="296" column="17" selection-start-line="296" selection-start-column="17" selection-end-line="296" selection-end-column="17" />
+        <state relative-caret-position="212">
+          <caret line="105" column="17" lean-forward="false" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#243#848#0" expanded="false" />
-            <element signature="e#1098#1153#0" expanded="false" />
-            <element signature="e#6411#6445#0" expanded="false" />
-            <element signature="e#9575#9605#0" expanded="false" />
-            <element signature="e#9699#10603#0" expanded="false" />
-            <element signature="e#9905#10387#0" expanded="false" />
-            <element signature="e#10180#10246#0" expanded="false" />
-            <element signature="e#10281#10387#0" expanded="false" />
-            <element signature="e#10433#10603#0" expanded="false" />
-            <element signature="e#10906#11050#0" expanded="false" />
-            <element signature="e#12175#12669#0" expanded="false" />
-            <element signature="e#12238#12444#0" expanded="false" />
-            <element signature="e#12251#12444#0" expanded="false" />
-            <element signature="e#12287#12442#0" expanded="false" />
-            <element signature="e#12501#12669#0" expanded="false" />
-            <element signature="e#12762#12817#0" expanded="false" />
           </folding>
         </state>
       </provider>
