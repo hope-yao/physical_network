@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88f95bfc-d4b9-4db0-93c9-bb74f4d5cbff" name="Default" comment="This structure and/or para setting doesn't work for 3DOF. Going to incoperate yyang's code.">
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/Boeing747_step_20s_ts01_normalized.mat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pde_rnn.py" />
+    <list default="true" id="88f95bfc-d4b9-4db0-93c9-bb74f4d5cbff" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm_decoupled.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm_decoupled_stack.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/DR_RNN.py" afterPath="$PROJECT_DIR$/DR_RNN.py" />
+      <change beforePath="$PROJECT_DIR$/assets/convergence.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/extrapolation2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/extrapolation_in_time.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/increase_time_steps.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/problem1_dist2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/problem1_dist3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/sensitivity_y2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/sensitivity_y3.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,104 +44,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DR_RNN.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DR_RNN.py">
+      <file leaf-file-name="pde_lstm_decoupled_stack_extrap.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="105" column="29" lean-forward="false" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+            <state relative-caret-position="204">
+              <caret line="446" column="46" lean-forward="true" selection-start-line="446" selection-start-column="46" selection-end-line="446" selection-end-column="46" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Data_driven_model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data_driven_model.py">
+      <file leaf-file-name="pde_lstm_decoupled_stack_extrap_3dof.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1018">
-              <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pde_rnn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pde_rnn.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pde_lstm.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pde_lstm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="artist.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/artist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_subplots.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/axes/_subplots.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recurrent.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/keras/layers/recurrent.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="912" column="8" lean-forward="false" selection-start-line="912" selection-start-column="8" selection-end-line="912" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/keras/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="746" column="13" lean-forward="false" selection-start-line="746" selection-start-column="13" selection-end-line="746" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="numeric.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/numpy/core/numeric.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="491" column="0" lean-forward="false" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="1003" column="0" lean-forward="false" selection-start-line="1003" selection-start-column="0" selection-end-line="1003" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="388">
+              <caret line="345" column="23" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="345" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,36 +79,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logdir</find>
-      <find>delta</find>
-      <find>test</find>
-      <find>y_test</find>
-      <find>y_train</find>
-      <find>mov</find>
-      <find>delta_t_training</find>
-      <find>101</find>
-      <find>delta_t_testing</find>
-      <find>self.delta_t_testing</find>
-      <find>0.99</find>
-      <find>get_residual</find>
-      <find>save</find>
-      <find>delta_t</find>
-      <find>print</find>
-      <find>load_data</find>
-      <find>ode_para</find>
-      <find>su</find>
-      <find>summary_op_testing</find>
-      <find>copyfile</find>
-      <find>num_layers</find>
-      <find>state_dim</find>
-      <find>num_time_steps</find>
-      <find>loss_val</find>
-      <find>len_t</find>
-      <find>metrics</find>
-      <find>objectives</find>
-      <find>aa</find>
-      <find>training_loss</find>
+      <find>stack</find>
+      <find>done</find>
+      <find>y_test_ex</find>
+      <find>y_train_ex</find>
+      <find>test_loss_val_hist_ex</find>
+      <find>trainex</find>
+      <find>test_ex</find>
+      <find>self.num_time_steps:</find>
+      <find>0.01</find>
+      <find>100</find>
+      <find>self.loss</find>
       <find>loss</find>
+      <find>self.control_pl</find>
+      <find>dim_state</find>
+      <find>y_true_pl</find>
+      <find>test_control</find>
+      <find>new_test_control</find>
+      <find>new_y_test</find>
+      <find>y_train</find>
+      <find>4:</find>
+      <find>new_y_test_ex</find>
+      <find>2001</find>
+      <find>2000</find>
+      <find>shuf</find>
+      <find>self</find>
+      <find>get_data</find>
+      <find>self.y_train[idx, :, j] * (max_range-min_range) + min_range</find>
+      <find>'train</find>
+      <find>loss_visualization</find>
+      <find>'new_max'</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/temp</dir>
@@ -200,6 +130,10 @@
         <option value="$PROJECT_DIR$/rnn_lstm.py" />
         <option value="$PROJECT_DIR$/pde_lstm.py" />
         <option value="$PROJECT_DIR$/pde_rnn.py" />
+        <option value="$PROJECT_DIR$/pde_lstm_decoupled.py" />
+        <option value="$PROJECT_DIR$/pde_lstm_decoupled_stack.py" />
+        <option value="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py" />
+        <option value="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py" />
       </list>
     </option>
   </component>
@@ -231,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,21 +178,27 @@
               <item name="physical_network" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="physical_network" type="462c0819:PsiDirectoryNode" />
+              <item name="saved_models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MG_net" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/pde_lstm_decoupled_stack.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/saved_logs" />
     </key>
@@ -279,8 +220,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pde_lstm">
-    <configuration name="DR_RNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.pde_lstm_decoupled_stack_extrap">
+    <configuration name="pde_lstm_decoupled" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -292,14 +233,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="physical_network" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DR_RNN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pde_lstm_decoupled.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="pde_lstm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pde_lstm_decoupled_stack" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -311,7 +251,43 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="physical_network" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pde_lstm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pde_lstm_decoupled_stack.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="pde_lstm_decoupled_stack_extrap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="physical_network" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="pde_lstm_decoupled_stack_extrap_3dof" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="physical_network" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -469,16 +445,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.DR_RNN" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pde_lstm" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pde_rnn" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.pde_rnn" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pde_lstm_decoupled" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pde_lstm_decoupled_stack" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pde_lstm_decoupled_stack_extrap" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pde_lstm_decoupled_stack_extrap_3dof" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.pde_rnn" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pde_lstm" />
-        <item index="2" class="java.lang.String" itemvalue="Python.DR_RNN" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.pde_lstm_decoupled_stack_extrap" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pde_lstm_decoupled_stack_extrap_3dof" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pde_lstm_decoupled_stack" />
+        <item index="3" class="java.lang.String" itemvalue="Python.pde_lstm_decoupled" />
+        <item index="4" class="java.lang.String" itemvalue="Python.pde_rnn" />
       </list>
     </recent_temporary>
   </component>
@@ -573,21 +553,29 @@
       <option name="project" value="LOCAL" />
       <updated>1517296702077</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added yyang's request on LSTM comparison">
+      <created>1532017088720</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1532017088720</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1984" y="-4" width="1857" height="1085" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2103825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3850211" sideWeight="0.13551913" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37763712" sideWeight="0.7420765" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3649789" sideWeight="0.25191256" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2637131" sideWeight="0.7765027" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36603376" sideWeight="0.63005465" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31962025" sideWeight="0.7765027" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36919832" sideWeight="0.7311475" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33122364" sideWeight="0.49584487" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3850211" sideWeight="0.86448085" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33122364" sideWeight="0.48688525" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28375527" sideWeight="0.7480874" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -653,7 +641,8 @@
     <MESSAGE value="extrapolation in time still needs improvement." />
     <MESSAGE value="3DOF data is running, but with converging problems.&#10;Used identity weight_u, y_true for training" />
     <MESSAGE value="This structure and/or para setting doesn't work for 3DOF. Going to incoperate yyang's code." />
-    <option name="LAST_COMMIT_MESSAGE" value="This structure and/or para setting doesn't work for 3DOF. Going to incoperate yyang's code." />
+    <MESSAGE value="added yyang's request on LSTM comparison" />
+    <option name="LAST_COMMIT_MESSAGE" value="added yyang's request on LSTM comparison" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -673,6 +662,16 @@
           <line>130</line>
           <option name="timeStamp" value="139" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pde_lstm_decoupled_stack.py</url>
+          <line>168</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pde_lstm_decoupled_stack.py</url>
+          <line>115</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -684,201 +683,174 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="140" />
+      <option name="time" value="198" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
-        <expression-string>import matplotlib.pyplot as plt
-plt.plot(train_loss_val_hist, label='train')
-plt.plot(test_loss_val_hist, label='test')
-#plt.plot(train_loss_val_hist_ex, label='train_ex')
-#plt.plot(test_loss_val_hist_ex, label='test_ex')
-plt.legend()
-print('done')
-import matplotlib.pyplot as plt
-import numpy as np
-feed_dict = {control_pl: control,
-             y_true_pl: y_test[itr_i*batch_size : (itr_i+1)*batch_size]}
-y_pred_val = sess.run(y_pred, feed_dict)
-y_pred_val = y_pred_val * np.expand_dims(np.expand_dims(y_train_max-y_train_min,0),0) + np.expand_dims(np.expand_dims(y_train_min,0),0)
-y_true_val = sess.run(y_true_pl, feed_dict)
-y_true_val = y_true_val * np.expand_dims(np.expand_dims(y_train_max-y_train_min,0),0) + np.expand_dims(np.expand_dims(y_train_min,0),0)
-for i in range(10):
-    plt.figure()
-    for j in range(9):
-        plt.subplot(3,3,j+1)
-        plt.plot(y_pred_val[i,:,j], label='pred')
-        plt.plot(y_true_val[i,:,j], label='true')
-        plt.legend()
-        #plt.axis([0, num_time_steps, y_train_min[j], y_train_max[j]])
-plt.show()</expression-string>
+        <expression-string>out_num = 3
+pred_dict = {}
+gt_dict = {}
+range_max = np.expand_dims(self.range_dict['train_max'][:out_num], 1)
+range_min = np.expand_dims(self.range_dict['train_min'][:out_num], 1)
+# pred
+train_gain = y_pred_train[:out_num] * (range_max - range_min) + range_min
+pred_dict['train'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i + 1, :]
+    pred_dict['train'] += [pred_dict['train'][-1] + gain_i]
+pred_dict['train'] = np.transpose(np.squeeze(np.asarray(pred_dict['train'])), (1, 0, 2))
+# gt
+train_gain = self.y_train[:out_num] * (range_max - range_min) + range_min
+gt_dict['train'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i + 1, :]
+    gt_dict['train'] += [gt_dict['train'][-1] + gain_i]
+gt_dict['train'] = np.transpose(np.squeeze(np.asarray(gt_dict['train'])), (1, 0, 2))
+range_max = np.expand_dims(self.range_dict['train_ex_max'][:out_num], 1)
+range_min = np.expand_dims(self.range_dict['train_ex_min'][:out_num], 1)
+# pred
+train_gain = y_pred_train_ex[:out_num] * (range_max - range_min) + range_min
+pred_dict['train_ex'] = [np.expand_dims(self.range_dict['train_ex_init'][:out_num], 1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i + 1, :]
+    pred_dict['train_ex'] += [pred_dict['train_ex'][-1] + gain_i]
+pred_dict['train_ex'] = np.transpose(np.squeeze(np.asarray(pred_dict['train_ex'])), (1, 0, 2))
+# gt
+train_gain = self.y_train_ex[:out_num] * (range_max - range_min) + range_min
+gt_dict['train_ex'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i + 1, :]
+    gt_dict['train_ex'] += [gt_dict['train_ex'][-1] + gain_i]
+gt_dict['train_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['train_ex'])), (1, 0, 2))
+range_max = np.expand_dims(self.range_dict['test_max'][:out_num], 1)
+range_min = np.expand_dims(self.range_dict['test_min'][:out_num], 1)
+# pred
+train_gain = y_pred_test[:out_num] * (range_max-range_min) + range_min
+pred_dict['test'] = [np.expand_dims(self.range_dict['test_init'][:out_num],1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i+1, :]
+    pred_dict['test'] += [pred_dict['test'][-1]+gain_i]
+pred_dict['test'] = np.transpose(np.squeeze(np.asarray(pred_dict['test'])), (1,0,2))
+# gt
+train_gain = self.y_test[:out_num] * (range_max - range_min) + range_min
+gt_dict['test'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i + 1, :]
+    gt_dict['test'] += [gt_dict['test'][-1] + gain_i]
+gt_dict['test'] = np.transpose(np.squeeze(np.asarray(gt_dict['test'])), (1, 0, 2))
+range_max = np.expand_dims(self.range_dict['test_ex_max'][:out_num], 1)
+range_min = np.expand_dims(self.range_dict['test_ex_min'][:out_num], 1)
+# pred
+train_gain = y_pred_test_ex[:out_num] * (range_max-range_min) + range_min
+pred_dict['test_ex'] = [np.expand_dims(self.range_dict['test_ex_init'][:out_num],1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i+1, :]
+    pred_dict['test_ex'] += [pred_dict['test_ex'][-1]+gain_i]
+pred_dict['test_ex'] = np.transpose(np.squeeze(np.asarray(pred_dict['test_ex'])), (1,0,2))
+# gt
+train_gain = self.y_test_ex[:out_num] * (range_max - range_min) + range_min
+gt_dict['test_ex'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i + 1, :]
+    gt_dict['test_ex'] += [gt_dict['test_ex'][-1] + gain_i]
+gt_dict['test_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['test_ex'])), (1, 0, 2))
+range_max = np.expand_dims(self.range_dict['new_max'][:out_num], 1)
+range_min = np.expand_dims(self.range_dict['new_min'][:out_num], 1)
+# pred
+train_gain = new_y_pred[:out_num] * (range_max-range_min) + range_min
+pred_dict['new'] = [np.expand_dims(self.range_dict['new_init'][:out_num],1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i+1, :]
+    pred_dict['new'] += [pred_dict['new'][-1]+gain_i]
+pred_dict['new'] = np.transpose(np.squeeze(np.asarray(pred_dict['new'])), (1,0,2))
+# gt
+train_gain = self.new_y_test[:out_num] * (range_max - range_min) + range_min
+gt_dict['new'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i + 1, :]
+    gt_dict['new'] += [gt_dict['new'][-1] + gain_i]
+gt_dict['new'] = np.transpose(np.squeeze(np.asarray(gt_dict['new'])), (1, 0, 2))
+range_max = np.expand_dims(self.range_dict['new_ex_max'][:out_num], 1)
+range_min = np.expand_dims(self.range_dict['new_ex_min'][:out_num], 1)
+# pred
+train_gain = new_y_pred_ex[:out_num] * (range_max-range_min) + range_min
+pred_dict['new_ex'] = [np.expand_dims(self.range_dict['new_ex_init'][:out_num],1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i+1, :]
+    pred_dict['new_ex'] += [pred_dict['new_ex'][-1]+gain_i]
+pred_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(pred_dict['new_ex'])), (1,0,2))
+# gt
+train_gain = self.new_y_test_ex[:out_num] * (range_max - range_min) + range_min
+gt_dict['new_ex'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+for i in range(train_gain.shape[1]):
+    gain_i = train_gain[:, i:i + 1, :]
+    gt_dict['new_ex'] += [gt_dict['new_ex'][-1] + gain_i]
+gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 0, 2))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>import matplotlib.pyplot as plt
-plt.plot(train_loss_val_hist, label='train')
-plt.plot(test_loss_val_hist, label='test')
-#plt.plot(train_loss_val_hist_ex, label='train_ex')
-#plt.plot(test_loss_val_hist_ex, label='test_ex')
-plt.legend()
-print('done')
-import matplotlib.pyplot as plt
-import numpy as np
-feed_dict = {control_pl: control,
-             y_true_pl: y_train[itr_i*batch_size : (itr_i+1)*batch_size]}
-y_pred_val = sess.run(y_pred, feed_dict)
-y_pred_val = y_pred_val * np.expand_dims(np.expand_dims(y_train_max-y_train_min,0),0) + np.expand_dims(np.expand_dims(y_train_min,0),0)
-y_true_val = sess.run(y_true_pl, feed_dict)
-y_true_val = y_true_val * np.expand_dims(np.expand_dims(y_train_max-y_train_min,0),0) + np.expand_dims(np.expand_dims(y_train_min,0),0)
-for i in range(10):
-    plt.figure()
-    for j in range(9):
-        plt.subplot(3,3,j+1)
-        plt.plot(y_pred_val[i,:,j], label='pred')
-        plt.plot(y_true_val[i,:,j], label='true')
-        plt.legend()
-        #plt.axis([0, num_time_steps, y_train_min[j], y_train_max[j]])
-plt.show()</expression-string>
+        <expression-string>self.range_dict['new_max'][0][:out_num]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>import matplotlib.pyplot as plt
-plt.plot(train_loss_val_hist, label='train')
-plt.plot(test_loss_val_hist, label='test')
-plt.plot(train_loss_val_hist_ex, label='train_ex')
-#plt.plot(test_loss_val_hist_ex, label='test_ex')
-plt.legend()
-print('done')
-plt.show()</expression-string>
+        <expression-string>self.range_dict['new_max'][:out_num]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>import matplotlib.pyplot as plt
-plt.plot(train_loss_val_hist, label='train')
-plt.plot(test_loss_val_hist, label='test')
-#plt.plot(train_loss_val_hist_ex, label='train_ex')
-#plt.plot(test_loss_val_hist_ex, label='test_ex')
-plt.legend()
-print('done')
-plt.show()</expression-string>
+        <expression-string>self.range_dict['new_max']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>import matplotlib.pyplot as plt
-plt.plot(train_loss_val_hist, label='train')
-plt.plot(test_loss_val_hist, label='test')
-#plt.plot(train_loss_val_hist_ex, label='train_ex')
-#plt.plot(test_loss_val_hist_ex, label='test_ex')
-plt.legend()
-print('done')</expression-string>
+        <expression-string>new_y_pred[:out_num] , (range_max - range_min) + range_min</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>import matplotlib.pyplot as plt
-import numpy as np
-feed_dict = {control_pl: control,
-             y_true_pl: y_train[itr_i*batch_size : (itr_i+1)*batch_size]}
-y_pred_val = sess.run(y_pred, feed_dict)
-y_pred_val = y_pred_val * np.expand_dims(np.expand_dims(y_train_max-y_train_min,0),0) + np.expand_dims(np.expand_dims(y_train_min,0),0)
-y_true_val = sess.run(y_true_pl, feed_dict)
-y_true_val = y_true_val * np.expand_dims(np.expand_dims(y_train_max-y_train_min,0),0) + np.expand_dims(np.expand_dims(y_train_min,0),0)
-for i in range(10):
-    plt.figure()
-    for j in range(9):
-        plt.subplot(3,3,j+1)
-        plt.plot(y_pred_val[i,:,j], label='pred')
-        plt.plot(y_true_val[i,:,j], label='true')
-        plt.legend()
-        #plt.axis([0, num_time_steps, y_train_min[j], y_train_max[j]])
-plt.show()</expression-string>
+        <expression-string>self.range_dict['train_max']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>import matplotlib.pyplot as plt
-plt.plot(train_loss_val_hist, label='train')
-plt.plot(test_loss_val_hist, label='test')
-plt.plot(train_loss_val_hist_ex, label='train_ex')
-#plt.plot(test_loss_val_hist_ex, label='test_ex')
-plt.legend()</expression-string>
+        <expression-string>np.expand_dims(self.range_dict['new_max'][:out_num], 1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>import matplotlib.pyplot as plt
-plt.plot(train_loss_val_hist, label='train')
-plt.plot(test_loss_val_hist, label='test')
-#plt.plot(train_loss_val_hist_ex, label='train_ex')
-#plt.plot(test_loss_val_hist_ex, label='test_ex')
-plt.legend()</expression-string>
+        <expression-string>(range_max - range_min) + range_min</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(new_data - np.expand_dims(np.min(new_data,1) )</expression-string>
+        <expression-string>new_y_pred[:out_num]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
     </expressions>
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>ep_i == 300</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ep_i ==</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/numpy/lib/npyio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6246">
-          <caret line="369" column="0" lean-forward="false" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Euler_backward.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/tensor_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5238">
-          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/axes/_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_11_15_50_04/iter31.png" />
-    <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_11_15_50_04/iter62.png" />
     <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_11_15_50_04/iter93.png" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm_matplotlib_backend/backend_interagg.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="1086" column="0" lean-forward="false" selection-start-line="1086" selection-start-column="0" selection-end-line="1086" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y2.png" />
+    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y3.png" />
     <entry file="file://$PROJECT_DIR$/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1692">
@@ -893,11 +865,7 @@ plt.legend()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sensitivity_y2.png" />
     <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_12_17_49_27/iter1364.png" />
     <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K3/DR-RNN_K3_2017_12_12_18_36_59/iter0.png" />
     <entry file="file://$PROJECT_DIR$/utils.py">
@@ -915,11 +883,7 @@ plt.legend()</expression-string>
     <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K3/DR-RNN_K3_2017_12_12_18_36_59/iter93.png" />
     <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K3/DR-RNN_K3_2017_12_12_18_36_59/iter1674.png" />
     <entry file="file://$PROJECT_DIR$/saved_models/DR-RNN_K3/DR-RNN_K3_2017_12_12_18_36_59/DR_RNN.py" />
-    <entry file="file://$PROJECT_DIR$/assets/extrapolation_in_time.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/extrapolation_in_time.png" />
     <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_13_20_41_26/iter620.png" />
     <entry file="file://$PROJECT_DIR$/assets/extrapolation2.png" />
     <entry file="file://$PROJECT_DIR$/PDE_net.py">
@@ -968,15 +932,6 @@ plt.legend()</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2124">
           <caret line="130" column="15" lean-forward="false" selection-start-line="130" selection-start-column="15" selection-end-line="130" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/lines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11682">
-          <caret line="674" column="44" lean-forward="false" selection-start-line="674" selection-start-column="44" selection-end-line="674" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +939,6 @@ plt.legend()</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2250">
           <caret line="138" column="25" lean-forward="false" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,109 +961,168 @@ plt.legend()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/transforms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="2073" column="0" lean-forward="false" selection-start-line="2073" selection-start-column="0" selection-end-line="2073" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data_driven_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1018">
           <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/keras/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="13068">
           <caret line="746" column="13" lean-forward="false" selection-start-line="746" selection-start-column="13" selection-end-line="746" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/keras/layers/recurrent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
+        <state relative-caret-position="16236">
           <caret line="912" column="8" lean-forward="false" selection-start-line="912" selection-start-column="8" selection-end-line="912" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/common_shapes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="677" column="0" lean-forward="false" selection-start-line="677" selection-start-column="0" selection-end-line="677" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DR_RNN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="1764">
           <caret line="105" column="29" lean-forward="false" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="2404" column="0" lean-forward="false" selection-start-line="2404" selection-start-column="0" selection-end-line="2404" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/axes/_subplots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="864">
           <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="8478">
           <caret line="491" column="0" lean-forward="false" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/artist.py">
+    <entry file="file://$PROJECT_DIR$/pde_lstm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="1003" column="0" lean-forward="false" selection-start-line="1003" selection-start-column="0" selection-end-line="1003" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pde_rnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="18">
           <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pde_lstm.py">
+    <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="174" column="10" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="180" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="124" column="27" lean-forward="false" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26190">
+          <caret line="1483" column="0" lean-forward="false" selection-start-line="1483" selection-start-column="0" selection-end-line="1483" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/lines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11556">
+          <caret line="667" column="0" lean-forward="false" selection-start-line="667" selection-start-column="0" selection-end-line="667" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/artist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3852">
+          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/numpy/core/_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19278">
+          <caret line="1071" column="0" lean-forward="false" selection-start-line="1071" selection-start-column="0" selection-end-line="1071" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/transforms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5058">
+          <caret line="295" column="0" lean-forward="false" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/common_shapes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11952">
+          <caret line="677" column="0" lean-forward="false" selection-start-line="677" selection-start-column="0" selection-end-line="677" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/matplotlib/path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="1129" column="22" lean-forward="false" selection-start-line="1129" selection-start-column="22" selection-end-line="1129" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="345" column="23" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="345" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="446" column="46" lean-forward="true" selection-start-line="446" selection-start-column="46" selection-end-line="446" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
