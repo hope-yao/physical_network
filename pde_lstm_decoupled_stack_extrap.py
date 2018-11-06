@@ -52,7 +52,7 @@ class PDE_LSTM():
             y_pred_stack2 = self.my_lstm(y_pred_stack1, y0)
         with tf.name_scope("stack3") as scope:
             y_pred_stack3 = self.my_lstm(y_pred_stack2, y0)
-        return y_pred_stack0
+        return y_pred_stack3
 
 
     def get_data(self):
@@ -162,11 +162,12 @@ class PDE_LSTM():
             for data_i in new_y_test:
                 new_data += [data_i[:-1, :] - data_i[1:, :]]
             new_data = np.asarray(new_data)
-            range_dict['min'] = np.copy(np.min(new_y_test, 1))
-            range_dict['max'] = np.copy(np.max(new_y_test, 1))
-            range_dict['init'] = np.copy(new_y_test[:, 0, :])
+            range_dict['min'] = np.copy(np.min(new_data, 1))
+            range_dict['max'] = np.copy(np.max(new_data, 1))
+            range_dict['init'] = np.copy(new_data[:, 0, :])
             new_data_normalized = (new_data - np.expand_dims(np.min(new_data, 1), 1)) / np.expand_dims(
                 np.max(new_data, 1) - np.min(new_data, 1), 1)
+            new_y_test = new_data_normalized
             # new_y_test = np.tile(new_data_normalized, (self.batch_size, 1, 1))
         data_dict['new_y_test'] = np.copy(new_y_test[:, :self.num_time_steps, :])
         range_dict['new_min'] += [range_dict['min']]
@@ -241,7 +242,9 @@ class PDE_LSTM():
         tfconfig.gpu_options.allow_growth = True
         self.sess = tf.Session(config=tfconfig)
         init = tf.global_variables_initializer()
-        self.sess.run(init)
+        # self.sess.run(init)
+        self.saver = tf.train.Saver()
+        self.saver.restore(self.sess, './saved_models/boeing_lstm1_ep_1800.ckpt')
 
     def run_sess(self, control, y, is_train=False):
         ave_loss_val_train_ex = []
@@ -342,14 +345,14 @@ class PDE_LSTM():
             pred_dict['train'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i + 1, :]
-                pred_dict['train'] += [pred_dict['train'][-1] + gain_i]
+                pred_dict['train'] += [pred_dict['train'][-1] - gain_i]
             pred_dict['train'] = np.transpose(np.squeeze(np.asarray(pred_dict['train'])), (1, 0, 2))
             # gt
             train_gain = self.y_train[:out_num] * (range_max - range_min) + range_min
             gt_dict['train'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i + 1, :]
-                gt_dict['train'] += [gt_dict['train'][-1] + gain_i]
+                gt_dict['train'] += [gt_dict['train'][-1] - gain_i]
             gt_dict['train'] = np.transpose(np.squeeze(np.asarray(gt_dict['train'])), (1, 0, 2))
 
             range_max = np.expand_dims(self.range_dict['train_ex_max'][:out_num], 1)
@@ -359,14 +362,14 @@ class PDE_LSTM():
             pred_dict['train_ex'] = [np.expand_dims(self.range_dict['train_ex_init'][:out_num], 1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i + 1, :]
-                pred_dict['train_ex'] += [pred_dict['train_ex'][-1] + gain_i]
+                pred_dict['train_ex'] += [pred_dict['train_ex'][-1] - gain_i]
             pred_dict['train_ex'] = np.transpose(np.squeeze(np.asarray(pred_dict['train_ex'])), (1, 0, 2))
             # gt
             train_gain = self.y_train_ex[:out_num] * (range_max - range_min) + range_min
-            gt_dict['train_ex'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+            gt_dict['train_ex'] = [np.expand_dims(self.range_dict['train_ex_init'][:out_num], 1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i + 1, :]
-                gt_dict['train_ex'] += [gt_dict['train_ex'][-1] + gain_i]
+                gt_dict['train_ex'] += [gt_dict['train_ex'][-1] - gain_i]
             gt_dict['train_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['train_ex'])), (1, 0, 2))
 
             range_max = np.expand_dims(self.range_dict['test_max'][:out_num], 1)
@@ -376,14 +379,14 @@ class PDE_LSTM():
             pred_dict['test'] = [np.expand_dims(self.range_dict['test_init'][:out_num],1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i+1, :]
-                pred_dict['test'] += [pred_dict['test'][-1]+gain_i]
+                pred_dict['test'] += [pred_dict['test'][-1] - gain_i]
             pred_dict['test'] = np.transpose(np.squeeze(np.asarray(pred_dict['test'])), (1,0,2))
             # gt
             train_gain = self.y_test[:out_num] * (range_max - range_min) + range_min
-            gt_dict['test'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+            gt_dict['test'] = [np.expand_dims(self.range_dict['test_init'][:out_num], 1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i + 1, :]
-                gt_dict['test'] += [gt_dict['test'][-1] + gain_i]
+                gt_dict['test'] += [gt_dict['test'][-1] - gain_i]
             gt_dict['test'] = np.transpose(np.squeeze(np.asarray(gt_dict['test'])), (1, 0, 2))
 
             range_max = np.expand_dims(self.range_dict['test_ex_max'][:out_num], 1)
@@ -393,14 +396,14 @@ class PDE_LSTM():
             pred_dict['test_ex'] = [np.expand_dims(self.range_dict['test_ex_init'][:out_num],1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i+1, :]
-                pred_dict['test_ex'] += [pred_dict['test_ex'][-1]+gain_i]
+                pred_dict['test_ex'] += [pred_dict['test_ex'][-1] - gain_i]
             pred_dict['test_ex'] = np.transpose(np.squeeze(np.asarray(pred_dict['test_ex'])), (1,0,2))
             # gt
             train_gain = self.y_test_ex[:out_num] * (range_max - range_min) + range_min
-            gt_dict['test_ex'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+            gt_dict['test_ex'] = [np.expand_dims(self.range_dict['test_ex_init'][:out_num], 1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i + 1, :]
-                gt_dict['test_ex'] += [gt_dict['test_ex'][-1] + gain_i]
+                gt_dict['test_ex'] += [gt_dict['test_ex'][-1] - gain_i]
             gt_dict['test_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['test_ex'])), (1, 0, 2))
 
             range_max = np.expand_dims(self.range_dict['new_max'][:out_num], 1)
@@ -410,14 +413,14 @@ class PDE_LSTM():
             pred_dict['new'] = [np.expand_dims(self.range_dict['new_init'][:out_num],1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i+1, :]
-                pred_dict['new'] += [pred_dict['new'][-1]+gain_i]
+                pred_dict['new'] += [pred_dict['new'][-1] - gain_i]
             pred_dict['new'] = np.transpose(np.squeeze(np.asarray(pred_dict['new'])), (1,0,2))
             # gt
             train_gain = self.new_y_test[:out_num] * (range_max - range_min) + range_min
-            gt_dict['new'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+            gt_dict['new'] = [np.expand_dims(self.range_dict['new_init'][:out_num], 1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i + 1, :]
-                gt_dict['new'] += [gt_dict['new'][-1] + gain_i]
+                gt_dict['new'] += [gt_dict['new'][-1] - gain_i]
             gt_dict['new'] = np.transpose(np.squeeze(np.asarray(gt_dict['new'])), (1, 0, 2))
 
             range_max = np.expand_dims(self.range_dict['new_ex_max'][:out_num], 1)
@@ -427,40 +430,38 @@ class PDE_LSTM():
             pred_dict['new_ex'] = [np.expand_dims(self.range_dict['new_ex_init'][:out_num],1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i+1, :]
-                pred_dict['new_ex'] += [pred_dict['new_ex'][-1]+gain_i]
+                pred_dict['new_ex'] += [pred_dict['new_ex'][-1] - gain_i]
             pred_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(pred_dict['new_ex'])), (1,0,2))
             # gt
             train_gain = self.new_y_test_ex[:out_num] * (range_max - range_min) + range_min
-            gt_dict['new_ex'] = [np.expand_dims(self.range_dict['train_init'][:out_num], 1)]
+            gt_dict['new_ex'] = [np.expand_dims(self.range_dict['new_ex_init'][:out_num], 1)]
             for i in range(train_gain.shape[1]):
                 gain_i = train_gain[:, i:i + 1, :]
-                gt_dict['new_ex'] += [gt_dict['new_ex'][-1] + gain_i]
+                gt_dict['new_ex'] += [gt_dict['new_ex'][-1] - gain_i]
             gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 0, 2))
-
-
 
             if ep_i % 10 == 0:
                 self.loss_visualization(ep_i, loss_dict, pred_dict, gt_dict)
 
                 import scipy.io as sio
-                sio.savemat('beoing_fig1.mat', {
-                    'loss': loss_dict['train']
-                })
+                # sio.savemat('boeing_fig1.mat', {
+                #     'loss': loss_dict['train']
+                # })
                 fig2_data = {}
                 for i in range(out_num):
-                    fig2_data['train_pred_{}'.format(i)] = pred_dict['train'][i, :, 0]
-                    fig2_data['train_gt_{}'.format(i)] = self.y_train[i, :, 0]
-                sio.savemat('beoing_fig2.mat', fig2_data)
+                    fig2_data['test_pred_{}'.format(i)] = pred_dict['test'][i, :, :]
+                    fig2_data['test_gt_{}'.format(i)] = gt_dict['test'][i, :, :]
+                sio.savemat('boeing_fig2.mat', fig2_data)
                 fig3_data = {}
                 for i in range(out_num):
-                    fig3_data['test_extra_pred_{}'.format(i)] = pred_dict['test_ex'][i, :, 0]
-                    fig3_data['test_extra_gt_{}'.format(i)] = self.y_test_ex[i, :, 0]
-                sio.savemat('beoing_fig3.mat', fig3_data)
+                    fig3_data['train_extra_pred_{}'.format(i)] = pred_dict['train_ex'][i, :, :]
+                    fig3_data['train_extra_gt_{}'.format(i)] = gt_dict['train_ex'][i, :, :]
+                sio.savemat('boeing_fig3.mat', fig3_data)
                 fig4_data = {}
                 for i in range(out_num):
-                    fig4_data['new_extra_pred_{}'.format(i)] = pred_dict['new_ex'][i, :, 0]
-                    fig4_data['new_extra_gt_{}'.format(i)] = self.new_y_test_ex[i, :, 0]
-                sio.savemat('beoing_fig4.mat', fig4_data)
+                    fig4_data['new_extra_pred_{}'.format(i)] = pred_dict['new_ex'][i, :, :]
+                    fig4_data['new_extra_gt_{}'.format(i)] = gt_dict['new_ex'][i, :, :]
+                sio.savemat('boeing_fig4.mat', fig4_data)
 
             if ep_i % 200 == 0:
                 saver = tf.train.Saver()
@@ -510,6 +511,9 @@ class PDE_LSTM():
 
 
 if __name__ == "__main__":
+    import os
+    os.environ['CUDA_DEVICE_ORDER'] = "PCI_BUS_ID"
+    os.environ["CUDA_VISIBLE_DEVICE"] = "7"
     pde_lstm = PDE_LSTM()
     pde_lstm.train_init()
     pde_lstm.train()

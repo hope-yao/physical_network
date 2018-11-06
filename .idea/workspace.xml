@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f95bfc-d4b9-4db0-93c9-bb74f4d5cbff" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm_decoupled.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm_decoupled_stack.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/convergence.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/extrapolation2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/extrapolation_in_time.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/increase_time_steps.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/problem1_dist2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/problem1_dist3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sensitivity_y2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/sensitivity_y3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py" afterPath="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py" />
+      <change beforePath="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py" afterPath="$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pde_lstm_decoupled_stack_extrap.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pde_lstm_decoupled_stack_extrap.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="446" column="46" lean-forward="true" selection-start-line="446" selection-start-column="46" selection-end-line="446" selection-end-column="46" />
+            <state relative-caret-position="8100">
+              <caret line="451" column="33" lean-forward="false" selection-start-line="451" selection-start-column="33" selection-end-line="451" selection-end-column="33" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -56,10 +46,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="pde_lstm_decoupled_stack_extrap_3dof.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/saved_models/YANGYU_RESULT/3DOF/3dof_lstm4/pde_lstm_decoupled_stack_extrap_3dof.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pde_lstm_decoupled_stack_extrap_3dof.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
+            <state relative-caret-position="6192">
               <caret line="345" column="23" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="345" selection-end-column="23" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -79,7 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>stack</find>
       <find>done</find>
       <find>y_test_ex</find>
       <find>y_train_ex</find>
@@ -109,6 +108,7 @@
       <find>'train</find>
       <find>loss_visualization</find>
       <find>'new_max'</find>
+      <find>save</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/temp</dir>
@@ -143,11 +143,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1984" />
-    <option name="y" value="-4" />
-    <option name="width" value="1857" />
-    <option name="height" value="1085" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="142" />
+    <option name="y" value="57" />
+    <option name="width" value="1426" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -166,6 +166,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,26 +174,15 @@
               <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
               <item name="physical_network" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="physical_network" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="physical_network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="physical_network" type="462c0819:PsiDirectoryNode" />
-              <item name="saved_models" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MG_net" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/pde_lstm_decoupled_stack.py" />
   </component>
@@ -560,22 +550,28 @@
       <option name="project" value="LOCAL" />
       <updated>1532017088720</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added yyang's request on LSTM comparison">
+      <created>1536304374174</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1536304374175</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1984" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="true" />
+    <frame x="142" y="57" width="1426" height="735" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2103825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27519658" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3649789" sideWeight="0.25191256" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2637131" sideWeight="0.7765027" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4180602" sideWeight="0.7765027" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36603376" sideWeight="0.63005465" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36919832" sideWeight="0.7311475" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33122364" sideWeight="0.48688525" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28375527" sideWeight="0.7480874" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28375527" sideWeight="0.7480874" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -683,7 +679,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="198" />
+      <option name="time" value="199" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -847,7 +843,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/saved_logs/DR-RNN_K2/DR-RNN_K2_2017_12_11_15_50_04/iter93.png" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm_matplotlib_backend/backend_interagg.py" />
     <entry file="file://$PROJECT_DIR$/assets/sensitivity_y2.png" />
     <entry file="file://$PROJECT_DIR$/assets/sensitivity_y3.png" />
@@ -914,13 +909,7 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/rnn/python/ops/core_rnn_cell_impl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-274">
-          <caret line="257" column="2" lean-forward="false" selection-start-line="257" selection-start-column="2" selection-end-line="257" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/rnn/python/ops/core_rnn_cell_impl.py" />
     <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/tensorflow/contrib/rnn/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -943,12 +932,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="18">
@@ -958,6 +941,12 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
           <second_editor>
             <js_state />
           </second_editor>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,7 +1027,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26190">
           <caret line="1483" column="0" lean-forward="false" selection-start-line="1483" selection-start-column="0" selection-end-line="1483" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,7 +1034,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11556">
           <caret line="667" column="0" lean-forward="false" selection-start-line="667" selection-start-column="0" selection-end-line="667" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +1041,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3852">
           <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,7 +1048,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +1063,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5058">
           <caret line="295" column="0" lean-forward="false" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +1070,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11952">
           <caret line="677" column="0" lean-forward="false" selection-start-line="677" selection-start-column="0" selection-end-line="677" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,7 +1077,6 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,7 +1090,7 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
     </entry>
     <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap_3dof.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
+        <state relative-caret-position="6192">
           <caret line="345" column="23" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="345" selection-end-column="23" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -1118,11 +1100,19 @@ gt_dict['new_ex'] = np.transpose(np.squeeze(np.asarray(gt_dict['new_ex'])), (1, 
     </entry>
     <entry file="file://$PROJECT_DIR$/pde_lstm_decoupled_stack_extrap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="446" column="46" lean-forward="true" selection-start-line="446" selection-start-column="46" selection-end-line="446" selection-end-column="46" />
+        <state relative-caret-position="8100">
+          <caret line="451" column="33" lean-forward="false" selection-start-line="451" selection-start-column="33" selection-end-line="451" selection-end-column="33" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saved_models/YANGYU_RESULT/3DOF/3dof_lstm4/pde_lstm_decoupled_stack_extrap_3dof.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
